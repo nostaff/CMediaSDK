@@ -2,10 +2,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "CMediaSDK"
-  s.version      = "2.6.3.1" # 版本号
-  s.summary      = "CMediaSDK is a SDK from CloudDragonfly providing union AD service."
+  s.version      = "2.6.9" # 版本号
+  s.summary      = "CMediaSDK is a SDK from CMedia providing union AD service."
   s.description  = <<-DESC
-                   ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
+  CMediaSDK provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
                    DESC
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }

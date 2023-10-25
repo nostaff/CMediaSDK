@@ -47,10 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property(nonatomic, weak) id<SFInterstitialDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 /**
  * 广告大小尺寸
  */
@@ -58,8 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) UIViewController *showAdController;
 
-//加载广告数据
-- (void)loadAdData;
+
 
 //展示横幅广告  传入承载广告的
 - (void)showInterstitialAd;

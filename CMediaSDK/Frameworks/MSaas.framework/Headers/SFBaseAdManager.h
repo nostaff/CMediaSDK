@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFADInfo : NSObject
 
-/// 广告主名称
+// 广告主名称
 @property (nonatomic, copy) NSString *adnName;
 
 // 广告主APPID
@@ -39,6 +39,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFBaseAdManager : NSObject
 
+/**
+ * 获取广告的媒体位
+ */
+@property (nonatomic, copy) NSString *mediaId;
+
+//加载广告数据
+- (void)loadAdData;
 /* 填充后可调用，返回当前最佳广告的信息 */
 - (SFADInfo *)getCurrentBaseEcpmInfo;
 

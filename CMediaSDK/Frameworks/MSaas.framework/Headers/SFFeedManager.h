@@ -17,12 +17,14 @@
  *  播放器只可能处于以下状态中的一种
  */
 typedef NS_ENUM(NSUInteger, SFMediaPlayerStatus) {
-    SFMediaPlayerStatusInitial = 0,         // 初始状态
-    SFMediaPlayerStatusLoading = 1,         // 加载中
-    SFMediaPlayerStatusStarted = 2,         // 开始播放
-    SFMediaPlayerStatusPaused = 3,          // 用户行为导致暂停
-    SFMediaPlayerStatusError = 4,           // 播放出错
-    SFMediaPlayerStatusStoped = 5,          // 播放停止
+    SFMediaPlayerStatusInitial      = 0,    // 初始状态
+    SFMediaPlayerStatusLoading      = 1,    // 加载中
+    SFMediaPlayerStatusStarted      = 2,    // 开始播放
+    SFMediaPlayerStatusPaused       = 3,    // 用户行为导致暂停
+    SFMediaPlayerStatusError        = 4,    // 播放出错
+    SFMediaPlayerStatusStoped       = 5,    // 播放停止
+    SFMediaPlayerStatusPlaying      = 6,    // 播放中
+    SFMediaPlayerStatusWillStart    = 10,   // 即将播放
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -64,21 +66,16 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property(nonatomic, weak) id<SFFeedDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
-/**
- * 最多返回的广告数量
- */
-@property (nonatomic) NSInteger adCount;
+
 /**
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *showAdController;
 
-//加载广告数据
-- (void)loadAdData;
+/**
+ * 最多返回的广告数量 ,默认为1
+ */
+@property (nonatomic) NSInteger adCount;
 
 /**
  绑定展示的图片视图和点击视图，行为由SDK控制
@@ -86,6 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param adData 广告数据
  @param views 可点击的视图
  */
+// !!!:  必须在确保视图成功显示在屏幕上之后再调用注册点击，确保广告进行有效曝光
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:( NSArray<__kindof UIView *> *)views;
 
 /// 自定义广告主时，需要进行注册

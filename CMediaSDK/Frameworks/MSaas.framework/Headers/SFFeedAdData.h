@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+//视频声音控制宏
 #define MSaasGdtMuteEnable @"MSaasGdtMuteEnable"
+//视频播放控制宏
 #define MSaasGdtPlayEnable @"MSaasGdtPlayEnable"
 
 #define MSaasGdtEnableSwitchKey @"MSaasGdtEnableSwitchKey"
@@ -17,7 +19,12 @@
 @interface SFFeedAdData : NSObject
 
 /**
- * 大图Url，可能为空，建议使用 - (void)registerAdViewForInteraction:(UIImageView *)view adData:(SFFeedAdData*)adData clickableViews:(NSArray *)views; 方法替代
+ * 是否由SDK渲染图片，默认为NO，如想让SDK渲染，注册点击事件之前赋值更改为YES，
+ */
+@property (nonatomic) BOOL isRenderImage;
+
+/**
+ * 大图Url，可能为空，不能以次区分视频和照片素材，视频可能也会有封面素材图，使用 isVideoAd 区分是否是视频素材
  */
 @property (nonatomic, copy, nullable) NSString *imageUrl;
 
@@ -32,7 +39,8 @@
 @property (nonatomic) double imageHeight;
 
 /**
- * >1：横图 <1：竖图
+ * >1：横图
+ * <1：竖图
  */
 @property (nonatomic) double imageRatio;
 
@@ -57,12 +65,12 @@
 @property (nonatomic, assign) NSInteger adID;
 
 /**
- * 创意按钮显示文字
+ * 广告按钮显示文字
  */
 @property (nonatomic, copy, nullable) NSString *buttonText;
 
 /**
- * 广告类型
+ * 广告主类型
  */
 @property (nonatomic, assign) NSInteger adType;
 
@@ -77,19 +85,24 @@
 @property (nonatomic, copy, nullable) NSString *adOriginName;
 
 /**
+ * 是否自定义视频播放器，注册点击事件之前赋值，默认由SDK去渲染视频广告
+ */
+@property (nonatomic) BOOL isCustomRender;
+
+/**
  * 是否为视频广告
  */
 @property (nonatomic) BOOL isVideoAd;
 
 /**
+ * 视频广告Url，可能为空
+ */
+@property (nonatomic, copy, nullable) NSString *videoUrl;
+
+/**
  * 视频广告时长
  */
 @property (nonatomic) double videoDuration;
-
-/**
- * 视频广告Url
- */
-@property (nonatomic, copy, nullable) NSString *videoUrl;
 
 /**
  * 视频广告的宽(非必传，可能为空)
@@ -102,22 +115,17 @@
 @property (nonatomic) double videoHeight;
 
 /**
- * 是否自定义视频播放器，注册点击事件之前赋值
- */
-@property (nonatomic) BOOL isCustomRender;
-
-/**
- * 数据
+ * 广告元数据
  */
 @property (nonatomic, strong, nullable) id data;
 
 /**
- * 广告主
+ * 广告主元数据
  */
 @property (nonatomic, strong, nullable) id manager;
 
 /**
- * 缓存的大图Image，注册之后有值
+ * 缓存的大图Image，注册之后异步有值
  */
 @property (nonatomic, strong, nullable) UIImage *bgImage;
 

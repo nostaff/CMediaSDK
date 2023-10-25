@@ -55,10 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property (nonatomic, weak) id<SFFullscreenVideoDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 
 /**
  * 加载广告数据
@@ -66,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadAdDataWithExtra:(NSDictionary * _Nullable)extra;
 
-//展示激励视频广告
+//展示全屏视频广告
 - (void)showFullscreenVideoAdWithController:(UIViewController *)showAdController;
 
 
