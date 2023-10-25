@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CMediaSDK"
-  s.version      = "2.7.0.2" # 版本号
+  s.version      = "2.7.1" # 版本号
   s.summary      = "CMediaSDK is a SDK from CMedia providing union AD service."
   s.description  = <<-DESC
                    ‘CMediaSDK provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
