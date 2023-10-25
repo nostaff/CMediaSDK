@@ -11,8 +11,6 @@
 
 - (void)adaptDisplayImage:(UIImage *)img;
 
-- (void)setImageWithUrl:(NSString *)imgUrl;
-
 - (void)showImageWithUrl:(NSString *)imgUrl;
 
 - (void)showImageWithUrl:(NSString *)imgUrl successBlock:(void(^)(UIImage *img))successBlock failBlock:(void(^)(NSError *error))faiBlock;

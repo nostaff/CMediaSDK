@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MSaas.h</key>
 		<data>
-		T7IefjI46SYnM/HQwkXP+koN+Fs=
+		hqFF7K8OsjF4Qe9FBbluThC/f6Q=
 		</data>
 		<key>Headers/SFAdSDKManager.h</key>
 		<data>
@@ -14,11 +14,7 @@
 		</data>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<data>
-		X/aBigfQv5Hq1WJgQdLiK/1cK98=
-		</data>
-		<key>Headers/SFAnimationGiftView.h</key>
-		<data>
-		OHRcNKj4c4XAJswT5BDHhA1bZg4=
+		+Fj1PLh1SgCZ/k/5Jclesyk9s4U=
 		</data>
 		<key>Headers/SFBannerManager.h</key>
 		<data>
@@ -30,7 +26,7 @@
 		</data>
 		<key>Headers/SFBaseAdManager.h</key>
 		<data>
-		R/i2RftLex/Cutsd1fh87Sz1vh4=
+		RuDCZCSJ3MQPhBK52YouPJ+ajfo=
 		</data>
 		<key>Headers/SFBaseManager.h</key>
 		<data>
@@ -46,7 +42,7 @@
 		</data>
 		<key>Headers/SFFeedAdData.h</key>
 		<data>
-		EYFVSMYvnklQYNbpAZ6UNG1osiA=
+		zkbpcl5J4P2bMjFQNnJDJQuzKzU=
 		</data>
 		<key>Headers/SFFeedManager.h</key>
 		<data>
@@ -66,11 +62,7 @@
 		</data>
 		<key>Headers/SFLaunchView.h</key>
 		<data>
-		sQ6GNqwkZksy/zta01M+hmFc0jA=
-		</data>
-		<key>Headers/SFNativeManager.h</key>
-		<data>
-		lC+FS7+EvfZtthHXq8eeUsKoxKo=
+		yWgpDj1SPUFqKn9/8+bW2RiXY1M=
 		</data>
 		<key>Headers/SFRewardVideoManager.h</key>
 		<data>
@@ -79,10 +71,6 @@
 		<key>Headers/SFSkipAdButton.h</key>
 		<data>
 		sa0Q69r+T1Jz7SUBeVmgGiFstak=
-		</data>
-		<key>Headers/SFSplashHitTestView.h</key>
-		<data>
-		rY3W3tukVlB0Zfgiv7fihQiCk7Y=
 		</data>
 		<key>Headers/SFSplashManager.h</key>
 		<data>
@@ -98,7 +86,7 @@
 		</data>
 		<key>Headers/UIImageView+SFAdd.h</key>
 		<data>
-		gA3B3XBQIkI/ADX0qZW9qa80DEs=
+		pBlaDIEVkHpCsR3AClzRl60U6p0=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -115,11 +103,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			T7IefjI46SYnM/HQwkXP+koN+Fs=
+			hqFF7K8OsjF4Qe9FBbluThC/f6Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			ywUzDxuzuxbX1s1XyER9EECHpLCGwZraxZSZSNHNCW8=
+			ShZf47AiJwi1hNWy7bqtxxyRk66ZY0YqBDsnx1cXgm4=
 			</data>
 		</dict>
 		<key>Headers/SFAdSDKManager.h</key>
@@ -137,22 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X/aBigfQv5Hq1WJgQdLiK/1cK98=
+			+Fj1PLh1SgCZ/k/5Jclesyk9s4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			ikHNwcmewcu3Dk+YcQhN7+5YTUF4cVoIxzjMkUnqT10=
-			</data>
-		</dict>
-		<key>Headers/SFAnimationGiftView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OHRcNKj4c4XAJswT5BDHhA1bZg4=
-			</data>
-			<key>hash2</key>
-			<data>
-			zjfuYwSdCEfjuIuxrGYSMtPsAxZAifN2hMmp8rSxS/k=
+			RLiNXTUFArLZj6/lMyCxO+9uIDdwsF9N9TfjXnVoiZ8=
 			</data>
 		</dict>
 		<key>Headers/SFBannerManager.h</key>
@@ -181,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R/i2RftLex/Cutsd1fh87Sz1vh4=
+			RuDCZCSJ3MQPhBK52YouPJ+ajfo=
 			</data>
 			<key>hash2</key>
 			<data>
-			jihKVtIZDC8LtU5Mgcye5TGukt39I8TiENtH0S56P7I=
+			a9Xzq6hgT35SYKH5Lkz69rGII6k3blyMlWHIpkQ7kqQ=
 			</data>
 		</dict>
 		<key>Headers/SFBaseManager.h</key>
@@ -225,11 +202,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EYFVSMYvnklQYNbpAZ6UNG1osiA=
+			zkbpcl5J4P2bMjFQNnJDJQuzKzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			FYdabsjwqDDqxAkQ7AYSWV45In/QPefOfcBjrMDU9AM=
+			pPxUDbqlbq8jqll4vex3SvEtTQtev9QuLixGqUh0KZw=
 			</data>
 		</dict>
 		<key>Headers/SFFeedManager.h</key>
@@ -280,22 +257,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sQ6GNqwkZksy/zta01M+hmFc0jA=
+			yWgpDj1SPUFqKn9/8+bW2RiXY1M=
 			</data>
 			<key>hash2</key>
 			<data>
-			j3VV3NsP8saxVKH97GHqbAY/z0FSUP/xaqu0FJVKCrY=
-			</data>
-		</dict>
-		<key>Headers/SFNativeManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lC+FS7+EvfZtthHXq8eeUsKoxKo=
-			</data>
-			<key>hash2</key>
-			<data>
-			lp9cQIk0fetviApM4iJufeK/trPMAt803mhX5lKjXNg=
+			C44FJaP6dhNyJaJYWOj0s8eg0fuxn1qDDEoNwEg/4YA=
 			</data>
 		</dict>
 		<key>Headers/SFRewardVideoManager.h</key>
@@ -318,17 +284,6 @@
 			<key>hash2</key>
 			<data>
 			DjPLAnkOdlBwuWPswedomDtY7LiosIqV7d+UGiRxT0w=
-			</data>
-		</dict>
-		<key>Headers/SFSplashHitTestView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rY3W3tukVlB0Zfgiv7fihQiCk7Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			mOG4d9VRts9X901nLpGOpmrUP+QXNrJ3Vy/wej4JPGI=
 			</data>
 		</dict>
 		<key>Headers/SFSplashManager.h</key>
@@ -368,11 +323,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gA3B3XBQIkI/ADX0qZW9qa80DEs=
+			pBlaDIEVkHpCsR3AClzRl60U6p0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wa/v55FzPsiaHGsssT4v7N5BhL/OZMdIAe5yUokIQhw=
+			QscaIKuh9iyc36/lsVIGI125APo0qtWSA9lJOYtxSh8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

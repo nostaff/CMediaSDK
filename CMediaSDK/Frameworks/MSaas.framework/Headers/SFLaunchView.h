@@ -21,17 +21,15 @@ typedef void(^ShowBlock)(void);
 @property (nonatomic, assign) BOOL frameSet;
 
 @property (nonatomic) CGRect adFrame;
-@property (nonatomic, weak) SFFeedAdData *model;
+@property (nonatomic, strong) SFFeedAdData *model;
 //底图背景
-@property (nonatomic, weak) UIImageView *backImgView;
+@property (nonatomic, strong) UIImageView *backImgView;
 //图片
-@property (nonatomic, weak) UIImageView *bigImgView;
+@property (nonatomic, strong) UIImageView *bigImgView;
 
 - (void)restrictedClickAreaWithFrame:(CGRect)frame;
 
 @property (nonatomic, copy) ShowBlock block;
-
-- (void)addTipLabel:(NSString *)tipStr WithView:(UIView *)bottomView restrictedClick:(BOOL)isRes;
 
 @end
 

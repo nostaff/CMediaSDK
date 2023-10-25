@@ -10,7 +10,7 @@
 
 + [下载 CMediaSDK](https://github.com/nostaff/CMediaSDK) 并使用附带的 [示例应用程序](https://github.com/nostaff/CMediaSDK/tree/master/Example/ADDemo)
 
-+ 查看 [文档](https://github.com/nostaff/CMediaSDK/blob/master/MSaasSDK/Document/iOS-SDK-对接文档.html) 以全面了解CMediaSDK中提供的所有API
++ 查看 [文档](https://github.com/nostaff/CMediaSDK/blob/master/CMediaSDK/Document/iOS-SDK-对接文档.html) 以全面了解CMediaSDK中提供的所有API
 
 + 如果您还有其他问题，请联系我们运营
 
@@ -26,7 +26,7 @@ $ gem install cocoapods
 
 ### Podfile
 
-要使用的CocoaPods MSaasSDK集成到您的Xcode项目，需要您指定它的 **Podfile**:
+要使用的CocoaPods CMediaSDK集成到您的Xcode项目，需要您指定它的 **Podfile**:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'

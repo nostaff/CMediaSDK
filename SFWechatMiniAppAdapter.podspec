@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.version      = "2.6.9" # 版本号
   s.summary      = "SFWechatMiniAppAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
-                   ‘CMediaSDK provides Union ADs which include miniAPP etc..’
+                   ‘CMedia provides Union ADs which include miniAPP etc..’
                    DESC
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }
