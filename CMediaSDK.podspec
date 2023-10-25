@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
   s.xcconfig =   { 'OTHER_LDFLAGS' => ['-lObjC']}
   s.pod_target_xcconfig =   { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i' }
   
-  s.source = { :http => "https://github.com/nostaff/CMediaSDK/releases/download/#{s.version}/CMediaSDK.zip" }
-  # s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK.zip" }
+  # s.source = { :http => "https://github.com/nostaff/CMediaSDK/releases/download/#{s.version}/CMediaSDK.zip" }
+  s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK.zip" }
   # s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
 
     
@@ -76,19 +76,19 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'CMediaSDK/SFAdBeiziAdapter.xcframework'
   end
   
-  # s.subspec 'SFAdTbAdapter' do |ss|
-  #   ss.ios.deployment_target = '11.0'
-  #   ss.dependency 'SFTanxSDK'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'CMediaSDK/SFAdTbAdapter.xcframework'
-  # end
+  s.subspec 'SFAdTbAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'SFTanxSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdTbAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdMsAdapter' do |ss|
-  #   ss.ios.deployment_target = '11.0'
-  #   ss.dependency 'MSMobAdSDK/MS'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'CMediaSDK/SFAdMsAdapter.xcframework'
-  # end
+  s.subspec 'SFAdMsAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'MSMobAdSDK/MS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdMsAdapter.xcframework'
+  end
   
   s.subspec 'SFAdSigmobAdapter' do |ss|
     ss.ios.deployment_target = '11.0'

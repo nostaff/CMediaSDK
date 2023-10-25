@@ -21,6 +21,7 @@
 #define banner_id               @"0c9985c146d6850f"
 #define fullscreen_video_id     @"9fd36fa1e33332ee"
 #define draw_video_id           @"2a5eacdec4bddf35"
+#define natives_id              @"5bea84e52ecdc13a"
 
 
 #define SF_ScreenW    [UIScreen mainScreen].bounds.size.width

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C40321EBCBBF48BB4F17D0C9 /* Pods_testPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F152B62801D55FCA81A111E /* Pods_testPod.framework */; };
+		69539C470E0EBC665DB97F2C /* Pods_ADDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5B00BBEB818FFF76AD7049 /* Pods_ADDemo.framework */; };
 		E73A7D862923A8B700B9A9B3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A7D852923A8B700B9A9B3 /* File.swift */; };
 		E75049DC2A4C288C000B5376 /* NativeAdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75049D92A4C288B000B5376 /* NativeAdTableViewCell.xib */; };
 		E75049DD2A4C288C000B5376 /* NativeAdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E75049DA2A4C288B000B5376 /* NativeAdTableViewCell.m */; };
@@ -34,10 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F152B62801D55FCA81A111E /* Pods_testPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68B59CEC02BF41B13F97A7B4 /* Pods-testPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPod.release.xcconfig"; path = "Target Support Files/Pods-testPod/Pods-testPod.release.xcconfig"; sourceTree = "<group>"; };
-		96BFCA1678874300D1AB87D5 /* Pods-testPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPod.debug.xcconfig"; path = "Target Support Files/Pods-testPod/Pods-testPod.debug.xcconfig"; sourceTree = "<group>"; };
-		E73A7D842923A8B700B9A9B3 /* testPod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testPod-Bridging-Header.h"; sourceTree = "<group>"; };
+		07E34E3A2AE91A320099D9E9 /* ADDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		5FAD63C711121C5588494FD9 /* Pods-ADDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADDemo.debug.xcconfig"; path = "Target Support Files/Pods-ADDemo/Pods-ADDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5B00BBEB818FFF76AD7049 /* Pods_ADDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73A7D852923A8B700B9A9B3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E75049D72A4C288B000B5376 /* NativeAdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdTableViewCell.h; sourceTree = "<group>"; };
 		E75049D82A4C288B000B5376 /* NativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		E75049DB2A4C288B000B5376 /* NativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
 		E7504A672A4E7F00000B5376 /* DrawVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawVideoViewController.m; sourceTree = "<group>"; };
 		E7504A682A4E7F00000B5376 /* DrawVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawVideoViewController.h; sourceTree = "<group>"; };
+		E75E19F2A328CAA89E2FE4A9 /* Pods-ADDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADDemo.release.xcconfig"; path = "Target Support Files/Pods-ADDemo/Pods-ADDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E78CDEDD2897AD4F00B0E5AA /* ADDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78CDEEA2897AD4F00B0E5AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E78CDEEC2897AD6500B0E5AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40321EBCBBF48BB4F17D0C9 /* Pods_testPod.framework in Frameworks */,
+				69539C470E0EBC665DB97F2C /* Pods_ADDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +97,8 @@
 		23229412DFAE8963C6FE930A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				96BFCA1678874300D1AB87D5 /* Pods-testPod.debug.xcconfig */,
-				68B59CEC02BF41B13F97A7B4 /* Pods-testPod.release.xcconfig */,
+				5FAD63C711121C5588494FD9 /* Pods-ADDemo.debug.xcconfig */,
+				E75E19F2A328CAA89E2FE4A9 /* Pods-ADDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 		70695C5F7007C10BBD97DC9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0F152B62801D55FCA81A111E /* Pods_testPod.framework */,
+				BE5B00BBEB818FFF76AD7049 /* Pods_ADDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +132,7 @@
 		E78CDEDF2897AD4F00B0E5AA /* ADDemo */ = {
 			isa = PBXGroup;
 			children = (
+				07E34E3A2AE91A320099D9E9 /* ADDemo-Bridging-Header.h */,
 				E78CDF0D2897B85400B0E5AA /* ADInfo.h */,
 				E78CDF022897B85400B0E5AA /* AppDelegate.h */,
 				E78CDEFB2897B85400B0E5AA /* AppDelegate.m */,
@@ -173,7 +174,6 @@
 				E78CDEEE2897AD6600B0E5AA /* LaunchScreen.storyboard */,
 				E78CDEF12897AD6600B0E5AA /* Info.plist */,
 				E78CDEF22897AD6600B0E5AA /* main.m */,
-				E73A7D842923A8B700B9A9B3 /* testPod-Bridging-Header.h */,
 			);
 			path = ADDemo;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 			dependencies = (
 			);
 			name = ADDemo;
-			productName = testPod;
+			productName = ADDemo;
 			productReference = E78CDEDD2897AD4F00B0E5AA /* ADDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -256,15 +256,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE7042EA3E5252F682683E9B /* [CP] Check Pods Manifest.lock */ = {
@@ -282,7 +282,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-testPod-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ADDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -295,15 +295,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ADDemo/Pods-ADDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -468,21 +468,21 @@
 		};
 		E78CDEF72897AD6600B0E5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96BFCA1678874300D1AB87D5 /* Pods-testPod.debug.xcconfig */;
+			baseConfigurationReference = 5FAD63C711121C5588494FD9 /* Pods-ADDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NN56R38BZT;
+				DEVELOPMENT_TEAM = 3FEA4VKGS4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/testPod",
+					"$(PROJECT_DIR)/ADDemo",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = testPod/Info.plist;
+				INFOPLIST_FILE = ADDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -494,10 +494,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmedia.iossdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "testPod/testPod-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADDemo/ADDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,21 +506,21 @@
 		};
 		E78CDEF82897AD6600B0E5AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68B59CEC02BF41B13F97A7B4 /* Pods-testPod.release.xcconfig */;
+			baseConfigurationReference = E75E19F2A328CAA89E2FE4A9 /* Pods-ADDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NN56R38BZT;
+				DEVELOPMENT_TEAM = 3FEA4VKGS4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/testPod",
+					"$(PROJECT_DIR)/ADDemo",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = testPod/Info.plist;
+				INFOPLIST_FILE = ADDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -532,10 +532,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmedia.iossdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "testPod/testPod-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADDemo/ADDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
