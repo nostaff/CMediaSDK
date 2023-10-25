@@ -1,26 +1,157 @@
-
 Pod::Spec.new do |s|
-
   s.name         = "CMediaSDK"
-  s.version      = "2.7.1" # 版本号
-  s.summary      = "CMediaSDK is a SDK from CMedia providing union AD service."
+  s.version      = "2.7.3.1"
+  s.summary      = "Mobile App Aggregation Ad SDK of CMedia SDK for iOS."
   s.description  = <<-DESC
-                   ‘CMediaSDK provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
+                   CMediaSDK SDK is an advertising aggregation SDK that allows you to monetize iOS applications through CMedia advertising.
                    DESC
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "小富" => "3290235031@qq.com" }
-
-  s.homepage     = "https://github.com/nostaff/CMediaSDK"
-  s.source       = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
-
-  s.platform     = :ios, "9.0"
-  s.ios.deployment_target = '9.0'
-
-  s.frameworks = 'AssetsLibrary', 'MapKit', 'JavaScriptCore', 'StoreKit', 'MobileCoreServices', 'WebKit', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'CoreLocation', 'CoreTelephony', 'SystemConfiguration', 'AdSupport', 'CoreMotion', 'Security', 'QuartzCore', 'CoreGraphics', 'SafariServices', 'UIKit', 'Foundation', 'AppTrackingTransparency', 'DeviceCheck'
-  s.libraries = 'c++', 'c++abi', 'resolv', 'xml2', 'bz2', 'z', 'iconv', 'sqlite3'
-
-  s.vendored_frameworks =  'CMediaSDK/Frameworks/MSaas.framework'
+  s.homepage     = "https://www.mediatom.cn/dockingdocs/detail?id=70"
+  s.license      = { :type => "MIT" }
+  s.author       = 'Lurich'
   
-  s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
+  s.platform     = :ios, '11.0'
+  s.ios.deployment_target = '11.0'
+  s.static_framework = true
+  s.requires_arc = true
+  s.swift_versions = '4.0'
   
+  s.frameworks   = 'AssetsLibrary', 'MapKit', 'JavaScriptCore', 'StoreKit', 'MobileCoreServices', 'WebKit', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'CoreLocation', 'CoreTelephony', 'SystemConfiguration', 'AdSupport', 'CoreMotion', 'Security', 'QuartzCore', 'CoreGraphics', 'SafariServices', 'UIKit', 'Foundation', 'AppTrackingTransparency', 'DeviceCheck'
+  s.libraries    = 'c++', 'c++abi', 'resolv', 'xml2', 'bz2', 'z', 'iconv', 'sqlite3'
+  
+  s.xcconfig =   { 'OTHER_LDFLAGS' => ['-lObjC']}
+  s.pod_target_xcconfig =   { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i' }
+  
+  s.source = { :http => "https://github.com/nostaff/CMediaSDK/releases/download/#{s.version}/CMediaSDK.zip" }
+    
+  s.default_subspecs = 'MSaas'
+
+  s.subspec 'MSaas' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.vendored_frameworks = 'CMediaSDK/MSaas.xcframework'
+  end
+  
+  s.subspec 'SFAdCsjAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'Ads-Fusion-CN-Beta'
+    ss.dependency 'Ads-Fusion-CN-Beta/CSJMediation'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdCsjAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdGdtAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'GDTMobSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdGdtAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdKsAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'KSAdSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdKsAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdJztAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'JADYun'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdJztAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdBaiduAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'BaiduMobAdSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdBaiduAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdBeiziAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'BeiZiSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdBeiziAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdTbAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'SFTanxSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdTbAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdMsAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'MSMobAdSDK/MS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdMsAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdSigmobAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'SigmobAd-iOS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdSigmobAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdMtgAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'MintegralAdSDK/All'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdMtgAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdPangleAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'Ads-Global'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdPangleAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdMobAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'Google-Mobile-Ads-SDK'
+    ss.dependency 'PersonalizedAdConsent'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdMobAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdMetaAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'FBAudienceNetwork'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdMetaAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdUnityAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'UnityAds'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdUnityAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdVungleAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'VungleSDK-iOS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdVungleAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdTopOnAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.dependency 'AnyThinkiOS/AnyThinkPangleAdapter'
+    ss.dependency 'AnyThinkiOS/AnyThinkAdmobAdapter'
+    ss.dependency 'AnyThinkiOS/AnyThinkFacebookAdapter'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdTopOnAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdApplovinAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'AppLovinSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'CMediaSDK/SFAdApplovinAdapter.xcframework'
+  end
+
 end
