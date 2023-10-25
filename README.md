@@ -1,19 +1,16 @@
 # MSaas
 ***
 [![MSaas](https://img.shields.io/badge/MSaas-AD-red.svg)](https://github.com/nostaff/CMediaSDK.git)
-[![Travis](https://img.shields.io/travis/xiaofu666/MSaas_SDK/tree/master/Example/YQAdDemo.svg?style=flat)](https://github.com/nostaff/CMediaSDK.git)
+[![Travis](https://img.shields.io/travis/nostaff/CMediaSDK/tree/master/Example/YQAdDemo.svg?style=flat)](https://github.com/nostaff/CMediaSDK.git)
 [![Language](https://img.shields.io/badge/Language-Objective--C-FF7F24.svg?style=flat)](https://github.com/nostaff/CMediaSDK.git)
 [![CocoaPods](https://img.shields.io/cocoapods/p/MSaas.svg)](https://github.com/nostaff/CMediaSDK.git)
 [![CocoaPods](https://img.shields.io/cocoapods/v/MSaas.svg)](https://github.com/nostaff/CMediaSDK.git)
- [![开源爱情](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/nostaff/CMediaSDK.git)
- [![开源爱情](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/nostaff/CMediaSDK.git)
- [![开源爱情](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/nostaff/CMediaSDK.git)
 
 ## 如何开始
 
-+ [下载 MSaas_SDK](https://github.com/nostaff/CMediaSDK) 并使用附带的 [示例应用程序](https://github.com/nostaff/CMediaSDK/tree/master/Example/ADDemo)
++ [下载 CMediaSDK](https://github.com/nostaff/CMediaSDK) 并使用附带的 [示例应用程序](https://github.com/nostaff/CMediaSDK/tree/master/Example/ADDemo)
 
-+ 查看 [文档](https://github.com/nostaff/CMediaSDK/blob/master/MSaasSDK/Document/iOS-SDK-对接文档.html) 以全面了解MSaas_SDK中提供的所有API
++ 查看 [文档](https://github.com/nostaff/CMediaSDK/blob/master/MSaasSDK/Document/iOS-SDK-对接文档.html) 以全面了解CMediaSDK中提供的所有API
 
 + 如果您还有其他问题，请联系我们运营
 
@@ -36,7 +33,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'TargetName' do
-    pod 'MSaas'
+    pod 'CMediaSDK'
 end
 ```
 然后，运行以下命令：
@@ -51,5 +48,5 @@ Lurich
 
 ## License
 
-MSaas 可在MIT许可下使用。有关详细信息，请参阅LICENSE文件。
+CMediaSDK 可在MIT许可下使用。有关详细信息，请参阅LICENSE文件。
 

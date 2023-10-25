@@ -6,7 +6,7 @@ target 'testPod' do
   use_frameworks!
 
   # MSaas主包
-  pod 'MSaas', :git => 'https://github.com/xiaofu666/MSaas'
+  pod 'CMediaSDK', :git => 'https://github.com/nostaff/CMediaSDK'
 
   # 以下按需导入
   # 穿山甲广告主适配包
