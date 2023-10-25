@@ -41,7 +41,7 @@
     CGFloat width = self.view.frame.size.width;
     //根据宽高比自定义适配
     CGFloat height = 60;
-    self.bannerView = [[UIView alloc]initWithFrame:CGRectMake(0,SF_ScreenH-height-[self getWindowSafeAreaInsets].bottom , width, height)];
+    self.bannerView = [[UIView alloc]initWithFrame:CGRectMake(0,SF_ScreenH-height , width, height)];
     
     self.banner =  [SFBannerManager new];
     self.banner.size = self.bannerView.bounds.size;
@@ -49,14 +49,7 @@
     self.banner.mediaId = banner_id;
     self.banner.showAdController = self;
     [self.banner loadAdData];
-    NSLog(@"Banner请求");
-}
-- (UIEdgeInsets)getWindowSafeAreaInsets{
-    if (@available(iOS 11.0, *)) {
-        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
-        return mainWindow.safeAreaInsets;
-    }
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    NSLog(@"Banner广告请求");
 }
 
 - (void)bannerAdDidLoad{

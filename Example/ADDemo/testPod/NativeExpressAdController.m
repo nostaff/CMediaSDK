@@ -93,7 +93,7 @@
  * 广告数据：加载成功
  */
 - (void)templateAdDidLoadViews:(NSArray<__kindof UIView *> *)views{
-    NSLog(@"广告数据：加载成功");
+    NSLog(@"模板广告：加载成功");
     NSMutableArray *dataSources = [self.dataArray mutableCopy];
     if (views.count > 0) {
         for (UIView *view in views) {
@@ -108,26 +108,26 @@
  * @param error : 错误信息
  */
 - (void)templateAdDidFailed:(NSError *)error{
-    NSLog(@"取广告失败调用 error = %@",error);
+    NSLog(@"模板广告：加载失败 error = %@",error);
 }
 /**
  * 广告视图：点击
  */
 - (void)templateAdDidClickedWithADView:(UIView *)templateAdView{
-    NSLog(@"广告点击后回调");
+    NSLog(@"模板广告：点击");
 }
 /**
  * 广告视图：渲染成功
  */
 - (void)templateAdDidRenderSuccessWithADView:(UIView *)templateAdView{
-    NSLog(@"广告渲染成功,此时view的高度已自适应");
+    NSLog(@"模板广告：渲染成功,此时view的高度已自适应");
     [self.tableView reloadData];
 }
 /**
  * 落地页或者appstoe返回事件
  */
 - (void)templateAdDidCloseOtherControllerWithADView:(UIView *)templateAdView{
-    NSLog(@"落地页或者appstoe返回事件");
+    NSLog(@"模板广告：落地页或者appstoe返回事件");
 }
 /**
  * 广告视图：关闭

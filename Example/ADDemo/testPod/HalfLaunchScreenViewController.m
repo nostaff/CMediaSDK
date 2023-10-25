@@ -33,31 +33,32 @@
     // Do any additional setup after loading the view from its nib.
 //    [self launchScreenBtnClicked:nil];
 }
-
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
-    SFSplashManager *manager = [SFSplashManager new];
-    manager.delegate = self;
-    manager.mediaId = splash_id;
     UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.2)];
     bottom.text = @"AD Demo";
     bottom.textAlignment = NSTextAlignmentCenter;
     bottom.font = [UIFont systemFontOfSize:35];
     bottom.userInteractionEnabled = YES;
     bottom.backgroundColor = [UIColor whiteColor];
-    //bottom 为含logo的view
-    manager.bottomView = bottom;
+    
+    SFSplashManager *manager = [SFSplashManager new];
+    manager.delegate = self;
+    manager.mediaId = splash_id;
+    manager.bottomView = bottom; //bottom 为含logo的view
     [manager loadAdData];
     self.manager = manager;
     NSLog(@"开始请求开屏广告");
 }
+
+
 
 #pragma mark ADDelegate
 /**
  * 广告数据：加载成功
  */
 - (void)splashAdDidLoad{
-    NSLog(@"广告数据：加载成功");
+    NSLog(@"开屏广告：加载成功");
     [self.manager showSplashAdWithWindow:[UIApplication sharedApplication].keyWindow];
 }
 /**
@@ -65,26 +66,26 @@
  * @param error : 错误信息
  */
 - (void)splashAdDidFailed:(NSError *)error{
-    NSLog(@"广告数据：加载失败 error = %@",error);
+    NSLog(@"开屏广告：加载失败 error = %@",error);
 }
 /**
  * 广告视图：点击
  * @param urlStr 媒体自定义广告时，返回的落地页链接
  */
 - (void)splashAdDidClickedWithUrlStr:(NSString *_Nullable)urlStr{
-    NSLog(@"广告视图：点击 urlStr = %@",urlStr);
+    NSLog(@"开屏广告：点击");
 }
 /**
  * 落地页或者appstoe返回事件
  */
 -(void)splashAdDidCloseOtherController{
-    NSLog(@"落地页或者appstoe返回事件");
+    NSLog(@"开屏广告：落地页或者appstoe返回事件");
 }
 /**
  * 广告视图：关闭
  */
 - (void)splashAdDidShowFinish{
-    NSLog(@"广告视图：展示完成");
+    NSLog(@"开屏广告：展示完成");
 }
 
 - (void)didReceiveMemoryWarning {

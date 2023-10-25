@@ -33,7 +33,8 @@
     [self.view addSubview:launchScreenBtn];
 }
 
-- (void)launchScreenBtnClicked:(UIButton*)sender{
+- (void)launchScreenBtnClicked:(UIButton*)sender
+{
     _manager = [SFSplashManager new];
     _manager.delegate = self;
     _manager.mediaId = splash_id;
@@ -46,7 +47,7 @@
  * 广告数据：加载成功
  */
 - (void)splashAdDidLoad{
-    NSLog(@"广告数据：加载成功");
+    NSLog(@"开屏广告：加载成功");
     [self.manager showSplashAdWithWindow:[UIApplication sharedApplication].keyWindow];
 }
 /**
@@ -54,26 +55,26 @@
  * @param error : 错误信息
  */
 - (void)splashAdDidFailed:(NSError *)error{
-    NSLog(@"广告数据：加载失败 error = %@",error);
+    NSLog(@"开屏广告：加载失败 error = %@",error);
 }
 /**
  * 广告视图：点击
  * @param urlStr 媒体自定义广告时，返回的落地页链接
  */
 - (void)splashAdDidClickedWithUrlStr:(NSString *_Nullable)urlStr{
-    NSLog(@"广告视图：点击 urlStr = %@",urlStr);
+    NSLog(@"开屏广告：点击 urlStr = %@",urlStr);
 }
 /**
  * 落地页或者appstoe返回事件
  */
 -(void)splashAdDidCloseOtherController{
-    NSLog(@"落地页或者appstoe返回事件");
+    NSLog(@"开屏广告：落地页或者appstoe返回事件");
 }
 /**
  * 广告视图：关闭
  */
 - (void)splashAdDidShowFinish{
-    NSLog(@"广告视图：展示完成");
+    NSLog(@"开屏广告：展示完成");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -92,7 +92,7 @@
  * 广告数据：加载成功
  */
 - (void)feedAdDidLoadDatas:(NSArray<__kindof SFFeedAdData *> *)datas{
-    NSLog(@"落地页或者appstoe返回事件");
+    NSLog(@"原生信息流广告：加载成功");
     NSMutableArray *dataSources = [self.dataSource mutableCopy];
     if (datas.count > 0) {
         for (SFFeedAdData *adData in datas) {
@@ -108,19 +108,19 @@
  * @param error : 错误信息
  */
 - (void)feedAdDidFailed:(NSError *)error{
-    NSLog(@"广告数据：加载失败 error = %@",error);
+    NSLog(@"原生信息流广告：加载失败 error = %@",error);
 }
 /**
  * 广告视图：点击
  */
 - (void)feedAdDidClicked{
-    NSLog(@"广告视图：点击");
+    NSLog(@"原生信息流广告：点击");
 }
 /**
  * 落地页或者appstoe返回事件
  */
 - (void)feedAdDidCloseOtherController{
-    NSLog(@"落地页或者appstoe返回事件");
+    NSLog(@"原生信息流广告：落地页或者appstoe返回事件");
 }
 
 - (void)didReceiveMemoryWarning {

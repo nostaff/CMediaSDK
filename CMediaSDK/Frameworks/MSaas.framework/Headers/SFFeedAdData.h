@@ -72,6 +72,11 @@
 @property (nonatomic, strong, nullable) UIImage *adLogo;
 
 /**
+ * 广告主名称
+ */
+@property (nonatomic, copy, nullable) NSString *adOriginName;
+
+/**
  * 是否为视频广告
  */
 @property (nonatomic) BOOL isVideoAd;
@@ -85,6 +90,16 @@
  * 视频广告Url
  */
 @property (nonatomic, copy, nullable) NSString *videoUrl;
+
+/**
+ * 视频广告的宽(非必传，可能为空)
+ */
+@property (nonatomic) double videoWidth;
+
+/**
+ * 视频广告的高(非必传，可能为空)
+ */
+@property (nonatomic) double videoHeight;
 
 /**
  * 是否自定义视频播放器，注册点击事件之前赋值

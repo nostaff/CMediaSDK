@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <MSaas/SFBaseAdManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFSplashDelegate <NSObject>
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SFSplashManager : NSObject
+@interface SFSplashManager : SFBaseAdManager
 /**
  * 广告回调的代理
  */
@@ -64,11 +65,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 设置开屏广告的停留时间default 5s （建议在 3s-5s 内）
  */
-@property(nonatomic, assign)NSInteger duration;
+@property (nonatomic, assign) NSInteger duration;
 /**
  * 设置开屏广告的等待时间 default 3s （建议在 3s-5s 内）
  */
-@property(nonatomic, assign)NSInteger waitDataDuration;
+@property (nonatomic, assign) NSInteger waitDataDuration;
 /**
  * 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
  */
@@ -85,6 +86,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param adv_id 广告主在MedPro平台对应的adv_id
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
+
+/**
+ API广告视频播放静音开关
+ @param isMute 是否静音
+ */
+- (void)videoMute:(BOOL)isMute;
 
 @end
 

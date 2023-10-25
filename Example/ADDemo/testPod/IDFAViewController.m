@@ -36,6 +36,7 @@
 - (void)getIDFACode{
     NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString *idfaCopyedMsg = [NSString stringWithFormat:@"%@\n 已经复制到你的粘贴板",idfa];
+    NSLog(@"IDFA:%@", idfa);
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:idfaCopyedMsg preferredStyle:UIAlertControllerStyleAlert];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"OK");
