@@ -48,6 +48,12 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) NSInteger button_size;
 //广告源名称
 @property (nonatomic, copy) NSString *adv_name;
+//是否开启热区 "A"=开启，"S"=关闭
+@property (nonatomic, copy) NSString *hotspot;
+//是否开启红包雨 "A"=开启，"S"=关闭
+@property (nonatomic, copy) NSString *red_package_rain;
+//广告类型  1:原生自渲染    2:原生模板
+@property (nonatomic, assign) NSInteger advAdType;
 
 //1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底
 @property (nonatomic, assign) SFADType adType;

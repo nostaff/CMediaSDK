@@ -129,4 +129,9 @@
  */
 @property (nonatomic, strong, nullable) UIImage *bgImage;
 
+/**
+ * 在混合信息流中，当为模板广告时，此属性有值
+ */
+@property (nonatomic, weak, nullable) UIView *adView;
+
 @end
