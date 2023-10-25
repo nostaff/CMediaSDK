@@ -11,54 +11,18 @@ target 'testPod' do
   # 以下按需导入
   
   # 穿山甲
-  pod 'MediatomiOS/SFAdCsjAdapter'
+  pod 'CMediaSDK/SFAdCsjAdapter'
   
   # 优量汇
-  pod 'MediatomiOS/SFAdGdtAdapter'
+  pod 'CMediaSDK/SFAdGdtAdapter'
   
   # 快手联盟
-  pod 'MediatomiOS/SFAdKsAdapter'
+  pod 'CMediaSDK/SFAdKsAdapter'
   
   # 百青藤
-  pod 'MediatomiOS/SFAdBaiduAdapter'
+  pod 'CMediaSDK/SFAdBaiduAdapter'
   
   # 京准通
-  pod 'MediatomiOS/SFAdJztAdapter'
-  
-  # Beizi
-  pod 'MediatomiOS/SFAdBeiziAdapter'
-  
-  # Meishu
-  pod 'MediatomiOS/SFAdMsAdapter'
-  
-  # Sigmob
-  pod 'MediatomiOS/SFAdSigmobAdapter'
-  
-  # Mintegral
-  pod 'MediatomiOS/SFAdMtgAdapter'
-  
-  # Pangle
-  pod 'MediatomiOS/SFAdPangleAdapter'
-  
-  # AdMob
-  pod 'MediatomiOS/SFAdMobAdapter'
-  
-  # Meta
-  pod 'MediatomiOS/SFAdMetaAdapter'
-  
-  # Vungle
-  pod 'MediatomiOS/SFAdVungleAdapter'
-  
-  # Tanx
-  pod 'MediatomiOS/SFAdTbAdapter'
-  
-  # UnityAds
-  pod 'MediatomiOS/SFAdUnityAdapter'
-  
-  # TopOn
-  pod 'MediatomiOS/SFAdTopOnAdapter'
-  
-  # Applovin
-  pod 'MediatomiOS/SFAdApplovinAdapter'
+  pod 'CMediaSDK/SFAdJztAdapter'
 
 end
