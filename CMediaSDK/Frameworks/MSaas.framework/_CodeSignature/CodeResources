@@ -4,21 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		fQEqY5M7uSmprcCbNyRnQncrWOM=
-		</data>
 		<key>Headers/MSaas.h</key>
 		<data>
 		lZf5QyZqU8ei0K9+AwlaMgvlAu8=
 		</data>
 		<key>Headers/SFAdSDKManager.h</key>
 		<data>
-		fjGURohO6oEUX6COqpO/IrHPNPc=
+		mR7lDAge0eyekgk+tzWTSU0Z6yE=
 		</data>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<data>
-		IZF2VlSCZey4En+gMq984kE7/LM=
+		6hDoth0QmOwYcLcQmwDmEKIGUfI=
 		</data>
 		<key>Headers/SFBannerManager.h</key>
 		<data>
@@ -30,7 +26,7 @@
 		</data>
 		<key>Headers/SFBaseManager.h</key>
 		<data>
-		mFbvxq26wkYMTSk7gm00oqhytdQ=
+		rCoS5shiKpxV1pVwqf26dwsXCO0=
 		</data>
 		<key>Headers/SFDrawVideoAdView.h</key>
 		<data>
@@ -42,7 +38,11 @@
 		</data>
 		<key>Headers/SFFeedManager.h</key>
 		<data>
-		DTM2K3qmYRwyZsgDVhsSHv8/czI=
+		bjdDHJztRaM7HQ4t34cWT8QNXc4=
+		</data>
+		<key>Headers/SFFocusImage.h</key>
+		<data>
+		KcP2OQ6othomx8P4FiF/hrmN2+0=
 		</data>
 		<key>Headers/SFFullscreenVideoManager.h</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Headers/SFSplashManager.h</key>
 		<data>
-		fBbAeX6L3feI+6aJ6sXivZNXYPw=
+		b6nMVwUU1QPlouM0C20eGzUUfEM=
 		</data>
 		<key>Headers/SFTemplateManager.h</key>
 		<data>
-		kiqoc4DdUF2tPyZp0yHL8B4NOHY=
+		erO5Ta/fqh5sTsdqOzrYuc9lri8=
 		</data>
 		<key>Headers/SFVideoView.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V0b6VuE+Zr5JLyCbQVjSoeP0RMY=
+		4DMUuhONXO2bfzHLJ68OS9DFxsM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,22 +110,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fjGURohO6oEUX6COqpO/IrHPNPc=
+			mR7lDAge0eyekgk+tzWTSU0Z6yE=
 			</data>
 			<key>hash2</key>
 			<data>
-			VNAcoyWOVIRAvVnGEUiRCS5ceP9JGjcSqJSGKd+8zSs=
+			xAllajohyU0vrLBGQzQymnpG5Xg9qEusCoNYgurUdQE=
 			</data>
 		</dict>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IZF2VlSCZey4En+gMq984kE7/LM=
+			6hDoth0QmOwYcLcQmwDmEKIGUfI=
 			</data>
 			<key>hash2</key>
 			<data>
-			IB4x/+jy7s5kE1NpMugmEgYtHNlZCrYhv+RkTNPjVO0=
+			c9876MHuEuMU81BEG3NPERRVKVMgU1zZBQxE5HYiIHk=
 			</data>
 		</dict>
 		<key>Headers/SFBannerManager.h</key>
@@ -154,11 +154,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mFbvxq26wkYMTSk7gm00oqhytdQ=
+			rCoS5shiKpxV1pVwqf26dwsXCO0=
 			</data>
 			<key>hash2</key>
 			<data>
-			PlsLkRCISd6LYnORC6BML6pocJW0E+q3Nzspa1vbiTA=
+			vDee5SL9s2DyFStfGy2gVBbXIXYNmlVOSjqZMB2Bid0=
 			</data>
 		</dict>
 		<key>Headers/SFDrawVideoAdView.h</key>
@@ -187,11 +187,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DTM2K3qmYRwyZsgDVhsSHv8/czI=
+			bjdDHJztRaM7HQ4t34cWT8QNXc4=
 			</data>
 			<key>hash2</key>
 			<data>
-			zl/oq7xLF7gsq2U+UKsCGfGuBro2IhgKHyGugDSyQUU=
+			ZKHqtRjILZNq4iIeGILNN05nWiVs4ctX+tSqlSwUiUw=
+			</data>
+		</dict>
+		<key>Headers/SFFocusImage.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KcP2OQ6othomx8P4FiF/hrmN2+0=
+			</data>
+			<key>hash2</key>
+			<data>
+			LEd62tKhjgtIghTpPSPXbnqxoqDcVCpMaoZXvoRdN68=
 			</data>
 		</dict>
 		<key>Headers/SFFullscreenVideoManager.h</key>
@@ -275,22 +286,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fBbAeX6L3feI+6aJ6sXivZNXYPw=
+			b6nMVwUU1QPlouM0C20eGzUUfEM=
 			</data>
 			<key>hash2</key>
 			<data>
-			8ATTAsHzv13rnsC8q4vr4pmRCdZNUCSvg0ZRdD7WOEY=
+			OPIBm9shUAsNd4FjiqQMf45JQBlHJQVf53KlgwG9Q84=
 			</data>
 		</dict>
 		<key>Headers/SFTemplateManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kiqoc4DdUF2tPyZp0yHL8B4NOHY=
+			erO5Ta/fqh5sTsdqOzrYuc9lri8=
 			</data>
 			<key>hash2</key>
 			<data>
-			2+/sFsHhaz03GiZP0hdgMfif4Kp4SiZ+4Q7PSSc/Puw=
+			neXV7CghtreV8ToK5mqK8vZgj9gGc5n7JtJdfim9szQ=
 			</data>
 		</dict>
 		<key>Headers/SFVideoView.h</key>

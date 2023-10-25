@@ -15,8 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
 
+@property (nonatomic, strong) NSMutableDictionary *registerDict;
+
++(instancetype)defaultManager;
+
 //注册APP id
 + (BOOL)registerAppId:(NSString *)appId;
++ (NSString *)appId;
 
 // 自定义配置用户分组信息
 + (void)setUserInfoForMap:(NSDictionary *)userInfo;
@@ -27,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 //设置子渠道
 + (void)setSubChannel:(NSString *)sub_channel;
 
-//个性化推荐广告设置
+//个性化推荐广告设置  YES:关闭个性化推荐   NO:打开个性化推荐    默认为NO
 + (void)setPersonalizedState:(BOOL)state;
 
 //设置地理位置经纬度，可提高广告填充及收益

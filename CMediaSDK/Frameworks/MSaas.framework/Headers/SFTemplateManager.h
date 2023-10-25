@@ -10,6 +10,13 @@
 #import <MSaas/SFBaseAdManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef enum {
+    SFTemplateExpressNativeNormalTheme = 0, // 默认 普通主题 （一般为背景色透明，按照联盟后台配置）
+    SFTemplateExpressNativeDarkTheme = 1,  // 黑模式
+    SFTemplateExpressNativeLightTheme = 2  // 白模式
+} SFTemplateExpressNativeTheme;
+
 @protocol SFTemplateDelegate <NSObject>
 
 @optional
@@ -63,6 +70,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *showAdController;
+/**
+ * 针对部分联盟广告主有效
+ */
+@property (nonatomic, assign) SFTemplateExpressNativeTheme theme;
 
 //加载广告数据
 - (void)loadAdData;
