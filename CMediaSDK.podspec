@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CMediaSDK"
-  s.version      = "2.7.4.0"
+  s.version      = "2.7.4.1"
   s.summary      = "Mobile App Aggregation Ad SDK of CMedia SDK for iOS."
   s.description  = <<-DESC
                    CMedia SDK is an advertising aggregation SDK that allows you to monetize iOS applications through CMedia advertising.
@@ -23,14 +23,13 @@ Pod::Spec.new do |s|
   
   # s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK-2.7.3.zip" }
   s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
-  s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => "2.7.4" }
 
     
   s.default_subspecs = 'MSaas'
 
   s.subspec 'MSaas' do |ss|
     ss.ios.deployment_target = '9.0'
-    ss.vendored_frameworks = 'CMediaSDK/MSaas.xcframework'
+    ss.vendored_frameworks = 'Frameworks/MSaas.xcframework'
   end
   
   s.subspec 'SFAdCsjAdapter' do |ss|
@@ -62,47 +61,47 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'Frameworks/SFAdJztAdapter.xcframework'
   end
   
-  # s.subspec 'SFAdBaiduAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'BaiduMobAdSDK'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdBaiduAdapter.xcframework'
-  # end
+  s.subspec 'SFAdBaiduAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'BaiduMobAdSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdBaiduAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdBeiziAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'BeiZiSDK'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdBeiziAdapter.xcframework'
-  # end
+  s.subspec 'SFAdBeiziAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'BeiZiSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdBeiziAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdTbAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'SFTanxSDK'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdTbAdapter.xcframework'
-  # end
+  s.subspec 'SFAdTbAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'SFTanxSDK'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdTbAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdMsAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'MSMobAdSDK/MS'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdMsAdapter.xcframework'
-  # end
+  s.subspec 'SFAdMsAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'MSMobAdSDK/MS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdMsAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdSigmobAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'SigmobAd-iOS'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdSigmobAdapter.xcframework'
-  # end
+  s.subspec 'SFAdSigmobAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'SigmobAd-iOS'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdSigmobAdapter.xcframework'
+  end
   
-  # s.subspec 'SFAdMtgAdapter' do |ss|
-  #   ss.ios.deployment_target = '9.0'
-  #   ss.dependency 'MintegralAdSDK/All'
-  #   ss.dependency 'CMediaSDK/MSaas'
-  #   ss.vendored_frameworks = 'Frameworks/SFAdMtgAdapter.xcframework'
-  # end
+  s.subspec 'SFAdMtgAdapter' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'MintegralAdSDK/All'
+    ss.dependency 'CMediaSDK/MSaas'
+    ss.vendored_frameworks = 'Frameworks/SFAdMtgAdapter.xcframework'
+  end
   
   # s.subspec 'SFAdPangleAdapter' do |ss|
   #   ss.ios.deployment_target = '9.0'
