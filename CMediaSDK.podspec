@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CMediaSDK"
-  s.version      = "2.7.3.4"
+  s.version      = "2.7.3.5"
   s.summary      = "Mobile App Aggregation Ad SDK of CMedia SDK for iOS."
   s.description  = <<-DESC
                    CMedia SDK is an advertising aggregation SDK that allows you to monetize iOS applications through CMedia advertising.
