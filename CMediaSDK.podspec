@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig =   { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i' }
   
   # s.source = { :http => "https://github.com/nostaff/CMediaSDK/releases/download/#{s.version}/CMediaSDK.zip" }
-  s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK-2.7.3.zip" }
-  # s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
+  # s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK-2.7.3.zip" }
+  s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
 
     
   s.default_subspecs = 'MSaas'
