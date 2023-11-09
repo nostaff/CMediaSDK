@@ -32,7 +32,7 @@ CMediaSDK SDK 在 V2.7.2 以上版本，支持cocoapod方式引入海外 SDK。<
 
 ```ruby
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
+platform :ios, '9.0'
 
 target 'testPod' do
     # Comment the next line if you don't want to use dynamic frameworks
