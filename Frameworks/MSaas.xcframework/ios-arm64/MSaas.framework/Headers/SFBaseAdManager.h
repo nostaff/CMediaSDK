@@ -32,14 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告加载ID
 @property (nonatomic, copy) NSString *requestID;
 
-/// 广告类型： 1:开屏；2:插屏；3:信息流；4:模板；5:banner；6:激励视频；7:全屏视频；8:draw视频流；9:信息流混出（自渲染+模板）；
+/// 1、开屏、2、 插屏、3、 信息流（31：原生；32：模板）、4、 激励视频、5、 横幅、6、 全屏视频、7、 Draw 信息流
 @property (nonatomic, assign) NSInteger adType;
 
 @end
 
 @interface SFBaseAdManager : NSObject
 
-/// 获取广告的媒体位
+/// 获取广告的广告位ID，必传
 @property (nonatomic, copy) NSString *mediaId;
 
 /// 自定义请求广告超时时间，单位秒，建议至少 3 秒以上，（PS：设置请求限时，可能影响广告收益，非必要不要设置）
@@ -54,7 +54,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// 填充后可调用，返回当前最佳广告的信息
 - (SFADInfo *)getCurrentBaseEcpmInfo;
 
+/// 自定义请求广告超时可调用，调用后可立即获得当前请求结果（成功 or 失败）
 - (void)getCurrentBaseEcpmAD;
+
+
+/// ** 媒体竞价展示广告时需要上报，需要在调用广告 show 之前调用 **
+/**
+ *  ======= 我方竞胜后需要回传第二价 =======
+ * @param secondPrice 媒体二价  (单位: 分)
+ */
+- (void)sendWinNotificationWithInfo:(CGFloat)secondPrice;
+/**
+ * ======= 我方竞败后需要回传最高价以及竞败原因 =======
+ * @param firstPrice 媒体一价  (单位: 分)
+ * @param errorType 竞败原因：（1 输给Mediatom其它广告位, 2 输给第三方ADN, 3 输给自售广告主）
+ */
+- (void)sendLossNotificationWith:(CGFloat)firstPrice fail:(NSInteger)errorType;
 
 @end
 

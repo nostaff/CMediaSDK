@@ -22,12 +22,14 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic) CGRect adFrame;
 @property (nonatomic, strong) SFFeedAdData *model;
+@property (nonatomic, assign) NSInteger scale_type;
 /// 底图背景
 @property (nonatomic, strong) UIImageView *backImgView;
 /// 图片
 @property (nonatomic, strong) UIImageView *bigImgView;
 
 - (void)restrictedClickAreaWithFrame:(CGRect)frame;
+- (void)restrictedClickCircleAreaWithCenter:(CGRect)frame;
 
 @property (nonatomic, copy) ShowBlock block;
 

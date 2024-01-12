@@ -16,11 +16,6 @@
 /// 获取 BOOL 值的Key
 #define MSaasVideoEnableSwitchKey @"MSaasVideoEnableSwitchKey"
 
-/// !!!: 下面宏已弃用，建议使用以上宏替代
-#define MSaasGdtMuteEnable        @"MSaasVideoMuteEnable"
-#define MSaasGdtPlayEnable        @"MSaasVideoPlayEnable"
-#define MSaasGdtEnableSwitchKey   @"MSaasVideoEnableSwitchKey"
-
 @interface SFFeedAdData : NSObject
 
 /**
@@ -58,6 +53,11 @@
  * 图标Url
  */
 @property (nonatomic, copy, nullable) NSString *iconUrl;
+
+/**
+ * 图标Url
+ */
+@property (nonatomic, strong, nullable) UIImage *icon;
 
 /**
  * 标题

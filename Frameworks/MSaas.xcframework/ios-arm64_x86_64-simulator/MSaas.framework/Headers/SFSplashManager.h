@@ -63,8 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置开屏广告的停留时间default 5s
 @property (nonatomic, assign) NSInteger duration DEPRECATED_MSG_ATTRIBUTE("已弃用，固定5秒");
 
-/// 设置开屏广告的等待时间 default 5s
-@property (nonatomic, assign) NSInteger waitDataDuration DEPRECATED_MSG_ATTRIBUTE("已弃用，后台配置");
+/// 设置开屏广告的超时时间 default 5s
+@property (nonatomic, assign) NSInteger waitDataDuration DEPRECATED_MSG_ATTRIBUTE("已弃用，用 timeout 替代");
 
 /// 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
 @property (nonatomic, weak) UIViewController *showAdController;
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadAndShowSplashAdWithWindow:(UIWindow *)window;
 
 /// 展示开屏广告,在广告成功回调 - (void)splashAdDidLoad; 中调用
-- (void)showSplashAdWithWindow:(UIWindow *)window;
+- (void)showSplashAdWithWindow:(UIWindow * _Nullable)window;
 
 /// 自定义广告主时，需要进行注册
 /// @param adv_id 广告主在Mediatom平台对应的adv_id

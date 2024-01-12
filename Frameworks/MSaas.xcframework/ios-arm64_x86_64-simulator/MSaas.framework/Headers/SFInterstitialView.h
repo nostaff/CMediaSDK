@@ -25,6 +25,8 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, strong) UIImageView *backImageView;
 
+@property (nonatomic, strong) UIView *buttonView;
+
 @property (nonatomic, strong, nullable) SFFeedAdData *model;
 
 -(void)startGCDTimer;

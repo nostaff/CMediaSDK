@@ -17,9 +17,11 @@ typedef NS_ENUM(NSInteger, SFGDPRConsentSet) {
 };
 
 typedef NS_ENUM(NSInteger, SFADEnvironment) {
-    SFADEnvironmentDebug = 0,
+    SFADEnvironmentDebug = 0,   // 内网
     SFADEnvironmentChina,
-    SFADEnvironmentOther,
+    SFADEnvironmentCCTV,
+    SFADEnvironmentOther,       // 海外
+    SFADEnvironmentAuto,
 };
 
 NS_ASSUME_NONNULL_BEGIN

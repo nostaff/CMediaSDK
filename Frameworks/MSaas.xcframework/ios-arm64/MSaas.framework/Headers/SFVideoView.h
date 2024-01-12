@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFVideoView : UIView
 
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<SFVideoViewPlayerDelegate> delegate;
 
 /// 是否自动控制播放
 @property (nonatomic, assign) BOOL isAutoControl;

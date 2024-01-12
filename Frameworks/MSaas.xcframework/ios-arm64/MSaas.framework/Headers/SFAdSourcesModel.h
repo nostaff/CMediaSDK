@@ -20,6 +20,7 @@ typedef enum : NSUInteger {
 
 @interface SFAdSourcesModel : NSObject
 
+/// MARK: 配置资源信息
 /// 广告源在平台的id
 @property (nonatomic, assign)   NSInteger adv_id;
 /// 广告源广告位id
@@ -50,6 +51,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy)     NSString *adv_name;
 /// 是否开启热区 "A"=开启，"S"=关闭
 @property (nonatomic, copy)     NSString *hotspot;
+/// 热区样式  1= 默认，2=摇一摇，3=半圆样式，4=扭一扭样式，5=滑一滑样式，6=蒙版，7=半圆遮罩
+@property (nonatomic, assign)   NSInteger hotspot_type;
 /// 是否开启红包雨 "A"=开启，"S"=关闭
 @property (nonatomic, copy)     NSString *red_package_rain;
 /// 广告类型
@@ -67,8 +70,16 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy)     NSString *button_position;
 /// 扩展字段（ isGromore ）
 @property (nonatomic, copy)     NSString *ext1;
-/// 投标id
-@property (nonatomic, copy)     NSString *bidPayload;
+/// 是否是gromre广告，0否 1是
+@property (nonatomic, assign)   NSInteger is_gromore;
+/// 点击后自动关闭  "A"=开启，"S"=关闭
+@property (nonatomic, copy)     NSString *auto_close;
+/// 自动关闭倒计时，为0的时候 表示不开启
+@property (nonatomic, assign)   NSInteger close_countdown;
+/// 0: 正常 1: 大 2: 超大
+@property (nonatomic, assign)   NSInteger scale_type;
+/// 0 =不限制 1=仅图片 2=仅视频 3图片+视频
+@property (nonatomic, assign)   NSInteger only_button;
 
 /// MARK: 广告资源信息
 /// 1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底
@@ -116,9 +127,13 @@ typedef enum : NSUInteger {
 /// trackID
 @property (nonatomic, copy)     NSString *trackID;
 /// 开始时间
-@property (nonatomic)           CFTimeInterval beginTime;
+@property (nonatomic)           NSTimeInterval startTime;
+/// 开始时间
+@property (nonatomic)           NSTimeInterval beginTime;
 /// 结束时间
-@property (nonatomic)           CFTimeInterval endTime;
+@property (nonatomic)           NSTimeInterval endTime;
+/// 刷新次数
+@property (nonatomic, assign)   NSInteger refresh_count;
 
 /// MARK: 以下参数为block回调
 /// 1：素材加载成功  2：素材加载失败  3：点击  4：从落地页返回  5：广告关闭 6：素材成功展示 7：激励视频获得奖励回调  8：素材渲染成功   9：视频播放状态改变
@@ -139,6 +154,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign)   NSInteger adv_place_type;
 /// 联盟版本号
 @property (nonatomic, copy)     NSString *adv_version;
+/// 是否已用
+@property (nonatomic, assign)   BOOL isCan;
 
 @end
 

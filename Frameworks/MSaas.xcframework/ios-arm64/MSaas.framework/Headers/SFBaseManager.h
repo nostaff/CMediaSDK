@@ -16,17 +16,19 @@ if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SF_DEBUG_UNION"]) {     
 @class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView,SFBannerView;
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ADSuccess)(SFAdSourcesModel *model);
+typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 
 @interface SFBaseManager : NSObject
 
-@property (nonatomic, copy, nullable) ADSuccess successBlock;
+@property (nonatomic, copy, nullable) SFADSuccess successBlock;
 @property (nonatomic, strong) SFAdSourcesModel * _Nullable baseModel;
 
 /// 半开屏时传入的 logo view
 @property (nonatomic, strong, nullable) UIView *bottomView;
+@property (nonatomic, strong) UIWindow *window;
 /// 开发者传入用来弹出目标页的ViewController
 @property (nonatomic, weak) UIViewController *showAdController;
+@property (nonatomic, strong) UIViewController *backVC;
 
 /// MARK: 以下三个方法必须子类实现
 
@@ -77,6 +79,7 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic) NSInteger hotspot_type;
 /// MARK: 展示开屏广告
 - (void)showSplashAdInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView;
+- (void)showSplashAdWithBottomView:(UIView *)bottomView;
 
 @end
 
