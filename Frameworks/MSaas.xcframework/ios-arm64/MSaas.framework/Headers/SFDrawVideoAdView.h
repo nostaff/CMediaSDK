@@ -25,11 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel *adClickLabel;
 
-@property (nonatomic, assign) BOOL isPlay;
-
 @property (nonatomic, weak, nullable) SFFeedAdData *model;
-
-- (void)addVolumeBtn;
 
 @end
 

@@ -6,8 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MSaas/SFVideoConfig.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef enum : NSUInteger {
+    SFADResultTypeStart,
+    SFADResultTypeRequestAD,
+    SFADResultTypeLoadAD,
+    SFADResultTypeFail,
+    SFADResultTypeShow,
+    SFADResultTypeClick,
+    SFADResultTypeClose
+} SFADResultType;
 
 @interface SFADInfo : NSObject
 
@@ -32,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告加载ID
 @property (nonatomic, copy) NSString *requestID;
 
-/// 1、开屏、2、 插屏、3、 信息流（31：原生；32：模板）、4、 激励视频、5、 横幅、6、 全屏视频、7、 Draw 信息流
+/// 1、开屏、2、 插屏、3、 信息流（31：自渲染；32：模板）、4、 激励视频、5、 横幅
 @property (nonatomic, assign) NSInteger adType;
 
 @end
@@ -42,8 +53,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取广告的广告位ID，必传
 @property (nonatomic, copy) NSString *mediaId;
 
-/// 自定义请求广告超时时间，单位秒，建议至少 3 秒以上，（PS：设置请求限时，可能影响广告收益，非必要不要设置）
+/// 视频相关控制，可选
+@property (nonatomic, strong) SFVideoConfig *videoConfig;
+
+/// 自定义请求广告超时时间，可选，单位秒，建议至少 3 秒以上，（PS：设置请求限时，可能影响广告收益，非必要不要设置）
 @property (nonatomic) double timeout;
+
+/// 使用广告位ID初始化。
+- (instancetype)initWithSlotId:(NSString *)slotId;
 
 /// 是否可以请求广告数据
 - (BOOL)isCanLoadAD;
@@ -70,6 +87,19 @@ NS_ASSUME_NONNULL_BEGIN
  * @param errorType 竞败原因：（1 输给Mediatom其它广告位, 2 输给第三方ADN, 3 输给自售广告主）
  */
 - (void)sendLossNotificationWith:(CGFloat)firstPrice fail:(NSInteger)errorType;
+
+@end
+
+@interface SFADResultInfo : NSObject
+
+/// 广告信息
+@property (nonatomic, strong) SFADInfo *info;
+
+/// 广告填充失败时的错误信息
+@property (nonatomic, copy, nullable) NSError *error;;
+
+/// 开屏广告流程状态
+@property (nonatomic, assign) SFADResultType type;
 
 @end
 

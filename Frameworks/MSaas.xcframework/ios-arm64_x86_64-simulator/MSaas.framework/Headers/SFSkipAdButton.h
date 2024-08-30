@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger,SFSkipType) {
 @property (nonatomic, assign) CGFloat           leftRightSpace;
 @property (nonatomic, assign) CGFloat           topBottomSpace;
 @property (nonatomic, assign) CGFloat bili;
+@property (nonatomic, assign) CGFloat resp_area_ratio;
+@property (nonatomic, assign) CGFloat display_countdown;
 @property (nonatomic, assign) SFSkipType skipType;
 
 - (instancetype)initWithSkipType:(SFSkipType)skipType;

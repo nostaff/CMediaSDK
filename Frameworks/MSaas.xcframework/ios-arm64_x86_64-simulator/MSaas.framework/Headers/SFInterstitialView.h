@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MSaas/SFSkipAdButton.h>
 
 @class SFFeedAdData,SFAdSourcesModel;
 
@@ -14,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^ShowBlock)(void);
 
 @interface SFInterstitialView : UIView
+
+@property (nonatomic, copy) NSString *html;
+
+@property (nonatomic, copy) void(^clickBlock)(NSString *url);
 
 @property (nonatomic) CGRect adFrame;
 
@@ -29,11 +34,17 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, strong, nullable) SFFeedAdData *model;
 
+@property (nonatomic, assign) CGFloat topY;
+
+@property (nonatomic, assign) NSInteger hotspot_type;
+
 -(void)startGCDTimer;
 
 @property (nonatomic, copy) ShowBlock block;
 
 @property (nonatomic, copy) void(^cloaseBlock)(void);
+
+@property (nonatomic, strong) SFSkipAdButton *timeBtn;
 
 @end
 

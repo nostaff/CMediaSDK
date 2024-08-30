@@ -7,16 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-typedef enum : NSUInteger {
-    SFSplashADTypeStart,
-    SFSplashADTypeRequestAD,
-    SFSplashADTypeLoadAD,
-    SFSplashADTypeFail,
-    SFSplashADTypeShow,
-    SFSplashADTypeClick,
-    SFSplashADTypeClose
-} SFSplashADType;
+#import <MSaas/SFBaseAdManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,11 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 自定义请求广告超时时间，单位秒，建议至少 3 秒以上，（PS：设置请求限时，可能影响广告收益，非必要不要设置）
 @property (nonatomic) double timeout;
 
+/// 视频相关控制，可选
+@property (nonatomic, strong) SFVideoConfig *videoConfig;
+
 @end
 
 @interface UIWindow (SFSplashAD)
 
-- (void)sf_showSplashADWithConfig:(void(^)(SFSplashADConfig *config))configBlock completion:(void(^)(SFSplashADType type, NSError *error))resultBlock;
+- (void)sf_showSplashADWithConfig:(void(^)(SFSplashADConfig *config))configBlock completion:(void(^)(SFADResultInfo *result))resultBlock;
 
 @end
 

@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <AVKit/AVKit.h>
 #import <MSaas/SFFeedManager.h>
+#import <MSaas/SFVideoConfig.h>
 
 @class SFVideoView;
 
@@ -25,8 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否自动控制播放
 @property (nonatomic, assign) BOOL isAutoControl;
-
+//@property (nonatomic, assign) BOOL isAutoPlay;
+@property (nonatomic, strong) SFVideoConfig *videoConfig;
+@property (nonatomic, copy) NSString *requestID;
 @property (nonatomic, assign) NSTimeInterval currentTime;
+
+@property (nonatomic, assign) NSTimeInterval duration;
 
 - (void)renderWirhVideo:(NSString *)videoUrl Image:(nullable NSString *)imageUrl;
 

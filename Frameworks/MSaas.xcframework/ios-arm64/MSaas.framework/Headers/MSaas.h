@@ -19,6 +19,7 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 
 #import <MSaas/SFAdSDKManager.h>
 #import <MSaas/SFAdSourcesModel.h>
+#import <MSaas/SFAdSourcesModel+SDK.h>
 #import <MSaas/SFAnimationGiftView.h>
 #import <MSaas/SFBannerManager.h>
 #import <MSaas/SFBannerView.h>
@@ -29,18 +30,23 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 #import <MSaas/SFFeedAdData.h>
 #import <MSaas/SFFeedManager.h>
 #import <MSaas/SFFullscreenVideoManager.h>
+#import <MSaas/SFInterstitialADConfig.h>
 #import <MSaas/SFInterstitialManager.h>
 #import <MSaas/SFInterstitialView.h>
 #import <MSaas/SFLaunchView.h>
+#import <MSaas/SFMotionView.h>
+#import <MSaas/SFNativeAdRenderProtocol.h>
 #import <MSaas/SFNativeManager.h>
 #import <MSaas/SFRewardVideoManager.h>
 #import <MSaas/SFSkipAdButton.h>
+#import <MSaas/SFSplashADConfig.h>
 #import <MSaas/SFSplashHitTestView.h>
 #import <MSaas/SFSplashManager.h>
+#import <MSaas/SFSplashMaskView.h>
 #import <MSaas/SFTemplateAdView.h>
 #import <MSaas/SFTemplateManager.h>
+#import <MSaas/SFVideoConfig.h>
 #import <MSaas/SFVideoView.h>
+#import <MSaas/UIButton+SFAdd.h>
 #import <MSaas/UIImageView+SFAdd.h>
-#import <MSaas/SFSplashADConfig.h>
-#import <MSaas/SFMotionView.h>
-#import <MSaas/SFSplashMaskView.h>
+#import <MSaas/UIView+SFAdd.h>

@@ -40,7 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
  * 激励视频广告播放达到激励条件
  * @param extra 额外参数，即初始化传入的extra
  */
-- (void)rewardedVideoDidRewardEffectiveWithExtra:(NSDictionary*)extra;
+- (void)rewardedVideoDidRewardEffectiveWithExtra:(NSDictionary *)extra;
+
+/**
+ * 激励视频广告服务端校验失败
+ * @param error 错误原因
+ */
+- (void)rewardedVideoDidRewardServerDidFail:(NSError *)error;
 
 /**
  * 激励视频广告已经关闭
@@ -55,13 +61,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property (nonatomic, weak) id<SFRewardVideoDelegate> delegate;
-
-
-/**
- * 用户ID，可选参数，服务端校验奖励时透传
- */
-@property (nonatomic, copy) NSString *userId;
-
 
 /**
  * 加载广告数据

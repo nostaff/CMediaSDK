@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL portrait;
 
 /// 1. 全屏接入：bottomView 不传入
-/// 2. 半屏接入：bottomView 传入logo的view
+/// 2. 半屏接入：bottomView 传入logo的view, 竖版状态下推荐大小为 CGSizeMake(开屏宽, 开屏高 - (开屏宽 * 16.0 / 9.0))
 /// 设置半屏广告的所含 logo 的 view
 @property (nonatomic, strong) UIView * _Nullable bottomView;
 
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIViewController *showAdController;
 
 /// 发起广告请求并展示在Window中
-- (void)loadAndShowSplashAdWithWindow:(UIWindow *)window;
+- (void)loadAndShowSplashAdWithWindow:(UIWindow * _Nullable)window;
 
 /// 展示开屏广告,在广告成功回调 - (void)splashAdDidLoad; 中调用
 - (void)showSplashAdWithWindow:(UIWindow * _Nullable)window;

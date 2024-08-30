@@ -7,6 +7,7 @@
 
 #import <MSaas/MSaas.h>
 #import <MSaas/SFTemplateManager.h>
+#import <MSaas/SFNativeAdRenderProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFNativeDelegate <NSObject>
@@ -79,7 +80,17 @@ NS_ASSUME_NONNULL_BEGIN
  @param adData 广告数据
  @param views 可点击的视图
  */
-- (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
+- (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views DEPRECATED_MSG_ATTRIBUTE("已弃用，使用 registerAdForView:adData: 替代");
+
+// 海外广告必须使用此方法注册
+- (void)registerAdForView:(UIView<SFNativeAdRenderProtocol> *)view adData:(SFFeedAdData *)adData;
+
+/**
+ 注销数据对象，在 tableView、collectionView 等场景需要复用 GDTUnifiedNativeAdView 时，
+ 需要在合适的时机，例如 cell 的 prepareForReuse 方法内执行 unregisterDataObject 方法，
+ 将广告对象与 NativeAdView 解绑
+ */
+- (void)unregisterAdData:(SFFeedAdData *)adData;
 
 - (void)deallocAllFeedProperty;
 

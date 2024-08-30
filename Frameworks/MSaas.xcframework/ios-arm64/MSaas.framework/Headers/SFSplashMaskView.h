@@ -26,13 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<SFSplashMaskDelegate> delegate;
 
-//1 : 有bottomView   0 ：无bottomView
+/// 1 : 有bottomView   0 ：无bottomView
 @property (nonatomic, assign) NSInteger type;
 
 @property (nonatomic, assign) NSInteger sensitivity;
-//0: 正常 1: 大 2: 超大
+/// 0: 正常 1: 大 2: 超大
 @property (nonatomic, assign) NSInteger scale_type;
-//6: 遮罩 7: 半圆
+/// 6: 遮罩 7: 半圆
 @property (nonatomic, assign) NSInteger style_type;
 
 - (void)addClickAreaWithView:(UIView *)bottomView restrictedClick:(BOOL)isRes;

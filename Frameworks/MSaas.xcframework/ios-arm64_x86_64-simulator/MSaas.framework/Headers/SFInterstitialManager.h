@@ -38,7 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 广告视图：关闭
  */
-- (void)interstitialAdDidClose;
+- (void)interstitialAdDidClose DEPRECATED_MSG_ATTRIBUTE("使用 interstitialAdDidAutoClose: 替代");
+- (void)interstitialAdDidAutoClose:(BOOL)autoClose;
 
 @end
 
@@ -52,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
 @property (nonatomic, weak) UIViewController *showAdController;
+
+/// 定时自动关闭插屏，默认由后台控制
+@property (nonatomic) double autoCloseTime;
 
 /// 展示插屏广告
 - (void)showInterstitialAd;

@@ -43,6 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SFBannerManager : SFBaseAdManager
+
 /**
  * 广告回调的代理
  */

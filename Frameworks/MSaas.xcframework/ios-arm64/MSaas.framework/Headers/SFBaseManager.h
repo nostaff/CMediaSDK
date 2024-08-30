@@ -7,13 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
+#import <MSaas/SFNativeAdRenderProtocol.h>
 
 #define M_Log(frmt, ...)                                                           \
 if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SF_DEBUG_UNION"]) {         \
     NSLog(@"【MediatomiOS】%@", [NSString stringWithFormat:frmt,##__VA_ARGS__]);     \
 }
 
-@class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView,SFBannerView;
+@class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView,SFBannerView,SFVideoConfig;
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^SFADSuccess)(SFAdSourcesModel *model);
@@ -30,8 +31,7 @@ typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, weak) UIViewController *showAdController;
 @property (nonatomic, strong) UIViewController *backVC;
 
-/// MARK: 以下三个方法必须子类实现
-
+/// MARK: 加载广告方法必须子类实现
 /// 加载广告
 - (void)loadADWithModel:(SFAdSourcesModel *)model;
 /// 联盟竞价获取参数
@@ -44,14 +44,19 @@ typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 /// 个性化推荐广告设置  1:关闭个性化推荐   0:打开个性化推荐    默认为0
 + (void)setPersonalizedState:(NSNumber *)state;
 
+@property (nonatomic, strong) SFAdSourcesModel * _Nullable sourceModel;
 /// 联盟竞价失败原因上报
 - (void)biddingAdFailWithPrice:(NSString *)price;
 /// 联盟竞价成功上报
 - (void)biddingAdSuccessWithPrice:(NSString *)price SecondPrice:(NSString *)secondPrice;
-/// 优量汇上报ECPM
+/// 竞价ECPM
 - (void)s2sBidECPMWithPrice:(NSString *)price;
+/// 竞价是否有效
+- (void)isValidBidECPMWithPrice:(double)price;
 /// 广告信息
 - (void)adJsonDict:(NSObject *)baseAd;
+/// 以下为测试方法请勿使用
+- (void)showAd:(UIView *)view;
 
 /// 子类自定义时可实现的视图对象
 @property (nonatomic, strong, nullable) SFLaunchView *yxADView;
@@ -59,11 +64,14 @@ typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, strong, nullable) SFBannerView *sf_bannerView;
 @property (nonatomic, strong, nullable) UIButton *closeBtn;
 @property (nonatomic, strong, nullable) SFSkipAdButton *skipButton;
+@property (nonatomic, strong, nullable) SFVideoConfig *videoConfig;
 
 /// 获取最顶层控制器
 - (UIViewController *)topVC;
 /// UIViewLayoutConstraintCreation
 - (void)sf_ViewAnchorWithView:(UIView *)view Top:(NSLayoutYAxisAnchor *)top Left:(NSLayoutXAxisAnchor *)left Bottom:(NSLayoutYAxisAnchor *)bottom Right:(NSLayoutXAxisAnchor *)right Padding:(UIEdgeInsets)padding Size:(CGSize)size;
+- (NSString *)getNowDateWithFormat:(NSString *)format;
+- (UIImage*)imageFromView:(UIView*)view;
 
 @end
 
@@ -117,6 +125,12 @@ typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 
 /// 原生广告绑定视图和注册
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
+
+/// 新版注册视图，必须子类去实现
+- (void)registerAdForView:(UIView<SFNativeAdRenderProtocol> *)view adData:(SFFeedAdData *)adData;
+
+/// 解绑视图点击
+- (void)unregisterAdData:(SFFeedAdData *)adData;
 /// 模板广告渲染视图
 - (void)renderViewWithViewArray:(NSArray *)viewArray;
 /// 更换 showAdController

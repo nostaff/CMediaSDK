@@ -26,24 +26,21 @@ typedef NS_ENUM(NSInteger, SFADEnvironment) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SFAdSDKManager : NSObject<WKScriptMessageHandler,WKNavigationDelegate>
-
-@property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
+@interface SFAdSDKManager : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *registerDict;
 
-+(instancetype)defaultManager;
+@property (nonatomic, strong) id _Nullable manager;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
++ (instancetype)defaultManager;
 
 /// 自定义设置用户的GDPR，GDPR是《通用数据保护条例》的缩写，界面仅适用于欧洲。
-@property (nonatomic,readonly) SFGDPRConsentSet dataConsentSet;
-/// 是否开启穿山甲聚合模式
-@property (nonatomic,readonly) BOOL isOpen;
+@property (nonatomic, readonly) SFGDPRConsentSet dataConsentSet;
 
 /// 大图片的展示样式，默认值为UIViewContentModeScaleAspectFit
 @property (nonatomic) UIViewContentMode contentMode;
-
-/// 是否开启穿山甲聚合模式，  YES:开启   NO:关闭    默认为 YES
-+ (void)setCSJMediation:(BOOL)isOpen;
 
 /// 国内注册APP id
 + (BOOL)registerAppId:(NSString *)appId;
@@ -55,19 +52,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 自定义配置用户分组信息
 + (void)setUserInfoForMap:(NSDictionary *)userInfo;
 
-/// 设置流量渠道 默认AppStore (只限大小写字母组成)
+/// 设置主渠道
 + (void)setChannel:(NSString *)channel;
 
 /// 设置子渠道
 + (void)setSubChannel:(NSString *)sub_channel;
 
-/// 个性化推荐广告设置  YES:关闭个性化推荐   NO:打开个性化推荐    默认为NO
+/// 是否限制个性化广告，  YES:限制   NO:不限制    默认为NO
 + (void)setPersonalizedState:(BOOL)state;
 
 /// 设置地理位置经纬度，可提高广告填充及收益
 + (void)setGeographicLocationLongitude:(NSString *)longitude Latitude:(NSString *)latitude;
 
-/// 获取SDK Version 版本号
+/// 获取 SDK Version 版本号
 + (NSString *)SDKVersion;
 
 /// 检查集成的联盟SDK版本号
@@ -83,9 +80,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)enableDefaultAudioSessionSetting:(BOOL)enabled;
 
+/// 是否使用 WKWebView 替代 SafariViewController，默认为NO
++ (void)usingWKWebView:(BOOL)open;
+
+/// 是否使用系统SafariViewController，默认为NO
++ (void)usingOSSaferiWebView:(BOOL)open;
+
 /// 清除广告素材缓存
 + (void)clearAdMaterialCache;
 
+/// 欧盟GDPR合规弹窗
 - (void)presentDataConsentDialogInViewController:(UIViewController *)viewController dismissalCallback:(void(^)(SFGDPRConsentSet dataConsentSet))dismissCallback;
 
 @end

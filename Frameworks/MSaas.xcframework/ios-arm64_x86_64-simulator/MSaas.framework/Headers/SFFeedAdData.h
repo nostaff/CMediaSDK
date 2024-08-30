@@ -9,12 +9,24 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//视频声音控制宏
-#define MSaasVideoMuteEnable      @"MSaasVideoMuteEnable"
-//视频播放控制宏
-#define MSaasVideoPlayEnable      @"MSaasVideoPlayEnable"
-/// 获取 BOOL 值的Key
-#define MSaasVideoEnableSwitchKey @"MSaasVideoEnableSwitchKey"
+
+typedef NS_ENUM(NSUInteger, SFTemplateStyleOptions) {
+    /* 默认样式-图文混合 */
+    SFTemplateStyleDefault  = 0,
+    /* 文字浮层 */
+    SFTemplateStyleNest     = 1,
+    /* 上文下图 */
+    SFTemplateStyleTTBI     = 2,
+    /* 上图下文 */
+    SFTemplateStyleTIBT     = 3,
+    /* 左文右图 */
+    SFTemplateStyleLTRI     = 4,
+    /* 左图右文 */
+    SFTemplateStyleLIRT     = 5,
+    /* 纯图片 */
+    SFTemplateStyleImage    = 6,
+};
+
 
 @interface SFFeedAdData : NSObject
 
@@ -27,6 +39,11 @@
  * 大图Url，可能为空，不能以次区分视频和照片素材，视频可能也会有封面素材图，使用 isVideoAd 区分是否是视频素材
  */
 @property (nonatomic, copy, nullable) NSString *imageUrl;
+
+/**
+ * 缓存的大图Image，注册之后异步有值
+ */
+@property (nonatomic, strong, nullable) UIImage *bgImage;
 
 /**
  * 大图广告的宽
@@ -50,14 +67,24 @@
 @property (nonatomic, copy, nullable) NSArray *mediaUrlList;
 
 /**
- * 图标Url
+ * 广告图标url
  */
 @property (nonatomic, copy, nullable) NSString *iconUrl;
 
 /**
- * 图标Url
+ * 广告图标图片
  */
 @property (nonatomic, strong, nullable) UIImage *icon;
+
+/**
+ * 广告平台logo标识url
+ */
+@property (nonatomic, copy, nullable) NSString *logoUrl;
+
+/**
+ * 广告平台logo图片
+ */
+@property (nonatomic, strong, nullable) UIImage *logo;
 
 /**
  * 标题
@@ -85,7 +112,7 @@
 @property (nonatomic, assign) NSInteger adType;
 
 /**
- * 广告角标
+ * 广告角标，必须渲染
  */
 @property (nonatomic, strong, nullable) UIImage *adLogo;
 
@@ -135,13 +162,13 @@
 @property (nonatomic, strong, nullable) id manager;
 
 /**
- * 缓存的大图Image，注册之后异步有值
- */
-@property (nonatomic, strong, nullable) UIImage *bgImage;
-
-/**
  * 在混合信息流中，当为模板广告时，此属性有值
  */
 @property (nonatomic, weak, nullable) UIView *adView;
+
+/**
+ * 是否添加
+ */
+@property (nonatomic) BOOL isAdd;
 
 @end
