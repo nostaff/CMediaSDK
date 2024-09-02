@@ -6,87 +6,87 @@ target 'testPod' do
   use_frameworks!
 
   # Mediatom
-  pod 'MediatomiOS', '2.7.8.5'
+  pod 'CMediaSDK', '2.7.8'
 
   # 以下按需导入
   
   # 穿山甲
-  pod 'MediatomiOS/SFAdCsjAdapter'
+  pod 'CMediaSDK/SFAdCsjAdapter'
   
   # 优量汇
-  pod 'MediatomiOS/SFAdGdtAdapter'
+  pod 'CMediaSDK/SFAdGdtAdapter'
   
   # 快手联盟
-  pod 'MediatomiOS/SFAdKsAdapter'
+  pod 'CMediaSDK/SFAdKsAdapter'
   
   # 百度
-  # pod 'MediatomiOS/SFAdBaiduAdapter'
+  # pod 'CMediaSDK/SFAdBaiduAdapter'
   
   # 京准通
-  # pod 'MediatomiOS/SFAdJztAdapter'
+  # pod 'CMediaSDK/SFAdJztAdapter'
   
   # 汇盈
-  # pod 'MediatomiOS/SFAdHrAdapter'
+  # pod 'CMediaSDK/SFAdHrAdapter'
   
   # 天目
-  # pod 'MediatomiOS/SFAdTmAdapter'
+  # pod 'CMediaSDK/SFAdTmAdapter'
   
   # 章鱼
-  # pod 'MediatomiOS/SFAdZyAdapter'
+  # pod 'CMediaSDK/SFAdZyAdapter'
   
   # 优推
-  # pod 'MediatomiOS/SFAdYtAdapter'
+  # pod 'CMediaSDK/SFAdYtAdapter'
   
   # 科大讯飞
-  # pod 'MediatomiOS/SFAdKdxfAdapter'
+  # pod 'CMediaSDK/SFAdKdxfAdapter'
   
   # Beizi
-  # pod 'MediatomiOS/SFAdBeiziAdapter'
+  # pod 'CMediaSDK/SFAdBeiziAdapter'
   
   # Meishu
-  # pod 'MediatomiOS/SFAdMsAdapter'
+  # pod 'CMediaSDK/SFAdMsAdapter'
   
   # Sigmob
-  # pod 'MediatomiOS/SFAdSigmobAdapter'
+  # pod 'CMediaSDK/SFAdSigmobAdapter'
   
   # Mintegral
-  # pod 'MediatomiOS/SFAdMtgAdapter'
+  # pod 'CMediaSDK/SFAdMtgAdapter'
   
   # Pangle
-  # pod 'MediatomiOS/SFAdPangleAdapter'
+  # pod 'CMediaSDK/SFAdPangleAdapter'
   
   # AdMob
-  # pod 'MediatomiOS/SFAdMobAdapter'
+  # pod 'CMediaSDK/SFAdMobAdapter'
   
   # Meta
-  # pod 'MediatomiOS/SFAdMetaAdapter'
+  # pod 'CMediaSDK/SFAdMetaAdapter'
   
   # Vungle
-  # pod 'MediatomiOS/SFAdVungleAdapter'
+  # pod 'CMediaSDK/SFAdVungleAdapter'
   
   # Tanx
-  # pod 'MediatomiOS/SFAdTbAdapter'
+  # pod 'CMediaSDK/SFAdTbAdapter'
   
   # UnityAds
-  # pod 'MediatomiOS/SFAdUnityAdapter'
+  # pod 'CMediaSDK/SFAdUnityAdapter'
   
   # Applovin
-  # pod 'MediatomiOS/SFAdApplovinAdapter'
+  # pod 'CMediaSDK/SFAdApplovinAdapter'
 
   # Ironsource
-  # pod 'MediatomiOS/SFAdIronsourceAdapter'
+  # pod 'CMediaSDK/SFAdIronsourceAdapter'
 
   # Inmobi
-  # pod 'MediatomiOS/SFAdInmobiAdapter'
+  # pod 'CMediaSDK/SFAdInmobiAdapter'
 
   # Bigo
-  # pod 'MediatomiOS/SFAdBigoAdapter'
+  # pod 'CMediaSDK/SFAdBigoAdapter'
   
   # TopOn
-  # pod 'MediatomiOS/SFAdTnAdapter'
+  # pod 'CMediaSDK/SFAdTnAdapter'
   
   # TradPlus
-  # pod 'MediatomiOS/SFAdTpAdapter'
+  # pod 'CMediaSDK/SFAdTpAdapter'
  
 
 end

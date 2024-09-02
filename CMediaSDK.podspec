@@ -106,33 +106,33 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'CMediaSDK/SFAdSigmobAdapter.xcframework'
   end
   
-  s.subspec 'SFAdFlAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'FLAD/FLAdSaas'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdFlAdapter.xcframework'
-  end
+  # s.subspec 'SFAdFlAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'FLAD/FLAdSaas'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdFlAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdTmAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'TianmuSDK'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdTmAdapter.xcframework'
-  end
+  # s.subspec 'SFAdTmAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'TianmuSDK'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdTmAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdHrAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'HRAdSDK/HR'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdHrAdapter.xcframework'
-  end
+  # s.subspec 'SFAdHrAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'HRAdSDK/HR'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdHrAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdYtAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    # ss.dependency 'YouTuiAdSDK'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdYtAdapter.xcframework'
-  end
+  # s.subspec 'SFAdYtAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   # ss.dependency 'YouTuiAdSDK'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdYtAdapter.xcframework'
+  # end
   
   s.subspec 'SFAdKdxfAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
@@ -140,163 +140,157 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'CMediaSDK/SFAdKdxfAdapter.xcframework'
   end
   
-  s.subspec 'SFAdZyAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'OctopusSDK'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdZyAdapter.xcframework'
-  end
+  # s.subspec 'SFAdZyAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'OctopusSDK'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdZyAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdLyAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdLyAdapter.xcframework'
-  end
+  # s.subspec 'SFAdLyAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdLyAdapter.xcframework'
+  # end
   
+  # s.subspec 'SFAdMtgAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'MintegralAdSDK/All', '7.6.3'
+  #   ss.dependency 'AppLovinMediationMintegralAdapter', '7.6.3.0.0'
+  #   ss.dependency 'TradPlusAdSDK/MintegralAdapter', '11.3.0'
+  #   ss.dependency 'TPNMintegralSDKAdapter','6.3.50.2'
+  #   ss.dependency 'GoogleMobileAdsMediationMintegral', '7.6.3.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdMtgAdapter.xcframework'
+  # end
   
+  # s.subspec 'SFAdPangleAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'Ads-Global', '5.9.0.7'
+  #   ss.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.7.0'
+  #   ss.dependency 'TradPlusAdSDK/PangleAdapter', '11.3.0'
+  #   ss.dependency 'TPNPangleSDKAdapter', '6.3.50.2'
+  #   ss.dependency 'GoogleMobileAdsMediationPangle', '5.9.0.7.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdPangleAdapter.xcframework'
+  # end
   
+  # s.subspec 'SFAdMetaAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'FBAudienceNetwork', '6.15.0'
+  #   ss.dependency 'AppLovinMediationFacebookAdapter', '6.15.0.0'
+  #   ss.dependency 'TradPlusAdSDK/FacebookAdapter', '11.3.0'
+  #   ss.dependency 'TPNFacebookSDKAdapter', '6.3.50'
+  #   ss.dependency 'GoogleMobileAdsMediationFacebook', '6.15.0.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdMetaAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdMtgAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'MintegralAdSDK/All', '7.6.3'
-    ss.dependency 'AppLovinMediationMintegralAdapter', '7.6.3.0.0'
-    ss.dependency 'TradPlusAdSDK/MintegralAdapter', '11.3.0'
-    ss.dependency 'TPNMintegralSDKAdapter','6.3.50.2'
-    ss.dependency 'GoogleMobileAdsMediationMintegral', '7.6.3.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdMtgAdapter.xcframework'
-  end
+  # s.subspec 'SFAdVungleAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'VungleAds', '7.3.1'
+  #   ss.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
+  #   ss.dependency 'TradPlusAdSDK/VungleAdapter', '11.3.0'
+  #   ss.dependency 'TPNVungleSDKAdapter', '6.3.50.2'
+  #   ss.dependency 'GoogleMobileAdsMediationVungle', '7.3.1.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdVungleAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdPangleAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'Ads-Global', '5.9.0.7'
-    ss.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.7.0'
-    ss.dependency 'TradPlusAdSDK/PangleAdapter', '11.3.0'
-    ss.dependency 'TPNPangleSDKAdapter', '6.3.50.2'
-    ss.dependency 'GoogleMobileAdsMediationPangle', '5.9.0.7.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdPangleAdapter.xcframework'
-  end
+  # s.subspec 'SFAdInmobiAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'InMobiSDK', '10.7.2'
+  #   ss.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.0'
+  #   ss.dependency 'TradPlusAdSDK/InMobiAdapter', '11.3.0'
+  #   ss.dependency 'TPNInmobiSDKAdapter', '6.3.50'
+  #   ss.dependency 'GoogleMobileAdsMediationInMobi', '10.7.2.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdInmobiAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdMetaAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'FBAudienceNetwork', '6.15.0'
-    ss.dependency 'AppLovinMediationFacebookAdapter', '6.15.0.0'
-    ss.dependency 'TradPlusAdSDK/FacebookAdapter', '11.3.0'
-    ss.dependency 'TPNFacebookSDKAdapter', '6.3.50'
-    ss.dependency 'GoogleMobileAdsMediationFacebook', '6.15.0.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdMetaAdapter.xcframework'
-  end
+  # s.subspec 'SFAdMobAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
+  #   ss.dependency 'AppLovinMediationGoogleAdapter', '11.3.0.0'
+  #   ss.dependency 'TradPlusAdSDK/AdMobAdapter', '11.3.0'
+  #   ss.dependency 'TPNAdmobSDKAdapter', '6.3.50.2'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdMobAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdVungleAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'VungleAds', '7.3.1'
-    ss.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
-    ss.dependency 'TradPlusAdSDK/VungleAdapter', '11.3.0'
-    ss.dependency 'TPNVungleSDKAdapter', '6.3.50.2'
-    ss.dependency 'GoogleMobileAdsMediationVungle', '7.3.1.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdVungleAdapter.xcframework'
-  end
+  # s.subspec 'SFAdApplovinAdapter' do |ss|
+  #   ss.ios.deployment_target = '12.0'
+  #   ss.dependency 'AppLovinSDK', '12.4.2'
+  #   ss.dependency 'TradPlusAdSDK/AppLovinAdapter', '11.3.0'
+  #   ss.dependency 'TPNApplovinSDKAdapter', '6.3.50.2'
+  #   ss.dependency 'GoogleMobileAdsMediationAppLovin', '12.4.2.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdMobAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdApplovinAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdInmobiAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'InMobiSDK', '10.7.2'
-    ss.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.0'
-    ss.dependency 'TradPlusAdSDK/InMobiAdapter', '11.3.0'
-    ss.dependency 'TPNInmobiSDKAdapter', '6.3.50'
-    ss.dependency 'GoogleMobileAdsMediationInMobi', '10.7.2.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdApplovinAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdInmobiAdapter.xcframework'
-  end
+  # s.subspec 'SFAdBigoAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'BigoADS', '4.2.3'
+  #   ss.dependency 'TradPlusAdSDK/BigoAdapter', '11.3.0'
+  #   ss.dependency 'TPNBigoSDKAdapter', '6.3.50.2'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.dependency 'CMediaSDK/SFAdTnAdapter'
+  #   ss.dependency 'CMediaSDK/SFAdTpAdapter'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdBigoAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdMobAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
-    ss.dependency 'AppLovinMediationGoogleAdapter', '11.3.0.0'
-    ss.dependency 'TradPlusAdSDK/AdMobAdapter', '11.3.0'
-    ss.dependency 'TPNAdmobSDKAdapter', '6.3.50.2'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdMobAdapter.xcframework'
-  end
+  # s.subspec 'SFAdTnAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'TPNiOS','6.3.50'
+  #   ss.dependency 'TraminiSDK','6.3.30'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdTnAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdApplovinAdapter' do |ss|
-    ss.ios.deployment_target = '12.0'
-    ss.dependency 'AppLovinSDK', '12.4.2'
-    ss.dependency 'TradPlusAdSDK/AppLovinAdapter', '11.3.0'
-    ss.dependency 'TPNApplovinSDKAdapter', '6.3.50.2'
-    ss.dependency 'GoogleMobileAdsMediationAppLovin', '12.4.2.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.dependency 'CMediaSDK/SFAdMobAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdApplovinAdapter.xcframework'
-  end
+  # s.subspec 'SFAdTpAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'TradPlusAdSDK', '11.3.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdTpAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdBigoAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'BigoADS', '4.2.3'
-    ss.dependency 'TradPlusAdSDK/BigoAdapter', '11.3.0'
-    ss.dependency 'TPNBigoSDKAdapter', '6.3.50.2'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.dependency 'CMediaSDK/SFAdTnAdapter'
-    ss.dependency 'CMediaSDK/SFAdTpAdapter'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdBigoAdapter.xcframework'
-  end
+  # s.subspec 'SFAdUnityAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'UnityAds'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdUnityAdapter.xcframework'
+  # end
   
-  s.subspec 'SFAdTnAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'TPNiOS','6.3.50'
-    ss.dependency 'TraminiSDK','6.3.30'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdTnAdapter.xcframework'
-  end
-  
-  s.subspec 'SFAdTpAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'TradPlusAdSDK', '11.3.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdTpAdapter.xcframework'
-  end
-  
-  
-  
-  
-  s.subspec 'SFAdUnityAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'UnityAds'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdUnityAdapter.xcframework'
-  end
-  
-  s.subspec 'SFAdIronsourceAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'IronSourceSDK', '8.0.0.0'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdIronsourceAdapter.xcframework'
-  end
+  # s.subspec 'SFAdIronsourceAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'IronSourceSDK', '8.0.0.0'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdIronsourceAdapter.xcframework'
+  # end
 
 end
