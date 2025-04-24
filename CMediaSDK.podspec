@@ -78,12 +78,12 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'CMediaSDK/SFAdBaiduAdapter.xcframework'
   end
   
-  s.subspec 'SFAdBeiziAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS'
-    ss.dependency 'CMediaSDK/MSaas'
-    ss.vendored_frameworks = 'CMediaSDK/SFAdBeiziAdapter.xcframework'
-  end
+  # s.subspec 'SFAdBeiziAdapter' do |ss|
+  #   ss.ios.deployment_target = '11.0'
+  #   ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS'
+  #   ss.dependency 'CMediaSDK/MSaas'
+  #   ss.vendored_frameworks = 'CMediaSDK/SFAdBeiziAdapter.xcframework'
+  # end
   
   s.subspec 'SFAdTbAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
