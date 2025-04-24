@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'MSaas'
 
   s.subspec 'MSaas' do |ss|
-    ss.ios.deployment_target = '10.0'
+    ss.ios.deployment_target = '11.0'
     ss.vendored_frameworks = 'CMediaSDK/MSaas.xcframework'
   end
   

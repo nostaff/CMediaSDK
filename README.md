@@ -39,15 +39,30 @@ target 'testPod' do
     use_frameworks!
     
     #核心库,必须添加
-    # Mediatom iOS 主包
-    pod 'CMediaSDK'
+    # CMediaSDK iOS 主包
+    pod 'CMediaSDK/MSaas'
     
     #各平台的Adapter
     #pod 'CMediaSDK/SFAd(平台名)Adapter'
     #按照您需要支持的平台，按需引入即可
-    #例如 穿山甲 引入
+
+    # 穿山甲
     pod 'CMediaSDK/SFAdCsjAdapter'
+    
+    # 优量汇
+    pod 'CMediaSDK/SFAdGdtAdapter'
+    
+    # 快手联盟
+    pod 'CMediaSDK/SFAdKsAdapter'
+    
+    # 百度
+    # pod 'CMediaSDK/SFAdBaiduAdapter'
+    
+    # 京准通
+    # pod 'CMediaSDK/SFAdJztAdapter'
   
+    # 科大讯飞
+    # pod 'CMediaSDK/SFAdKdxfAdapter'
 end
 ```
 
@@ -55,7 +70,7 @@ end
 
 |network|podCode|
 |---|---|
-|CMediaSDK|    pod 'CMediaSDK' |
+|CMediaSDK|    pod 'CMediaSDK/MSaas' |
 |穿山甲|       pod 'CMediaSDK/SFAdCsjAdapter' |
 |优量汇|       pod 'CMediaSDK/SFAdGdtAdapter' |
 |快手联盟|     pod 'CMediaSDK/SFAdKsAdapter' |
