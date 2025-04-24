@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SFMotionDelegate <NSObject>
 
-- (void)iphoneMotionBegan:(CGRect)frame;
+- (void)iphoneMotionBegan:(CGRect)frame; //扭一扭
+- (void)iphoneShakeBegan:(CGRect)frame;  //摇一摇
 
 @end
 

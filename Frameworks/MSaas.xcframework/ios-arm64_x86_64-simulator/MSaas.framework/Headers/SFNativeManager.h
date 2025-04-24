@@ -47,6 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nativeAdDidRenderSuccessWithADView:(UIView *)nativeAdView;
 /**
+ * 广告视图：渲染失败
+ */
+- (void)nativeAdDidRenderFailedWithError:(NSError *)error;
+
+/**
  * 广告视图：关闭
  */
 - (void)nativeAdDidCloseWithADView:(UIView *)nativeAdView;

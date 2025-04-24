@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger,SFSkipType) {
     SFSkipTypeRoundProgressText = 8,//圆形:进度圈+跳过
     
     SFSkipTypeCustomGdtSkip = 9,//自定义广点通跳过
+    SFSkipTypeVast = 10 //vast海外 是一个返回按键，没有动画 没有倒计时
 };
 
 @interface SFSkipAdButton : UIButton

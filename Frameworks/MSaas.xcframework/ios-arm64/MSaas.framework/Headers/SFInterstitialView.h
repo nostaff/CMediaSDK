@@ -46,6 +46,10 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, strong) SFSkipAdButton *timeBtn;
 
+@property (nonatomic, strong) UIImageView *topImgView;
+
+@property (nonatomic, assign) NSInteger agreement;
+
 @end
 
 NS_ASSUME_NONNULL_END

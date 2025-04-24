@@ -63,6 +63,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<SFRewardVideoDelegate> delegate;
 
 /**
+ * 用户ID可选
+ */
+@property (nonatomic, copy) NSString *userId;
+
+/**
  * 加载广告数据
  * @param extra 额外参数
  */

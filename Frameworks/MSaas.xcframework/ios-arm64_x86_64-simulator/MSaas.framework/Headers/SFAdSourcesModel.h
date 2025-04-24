@@ -37,7 +37,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy)     NSString *ext;
 /// 1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底
 @property (nonatomic, assign)   SFADType adType;
-/// 插屏样式  1= 半插屏，2=插全屏
+/// 插屏样式  0= 半插屏，1=插全屏
 @property (nonatomic, assign)   NSInteger is_full_screen;
 /// 请求的广告唯一Id
 @property (nonatomic, copy)     NSString *uniqueID;
@@ -50,7 +50,7 @@ typedef enum : NSUInteger {
 /// 视频状态（具体查看SFMediaPlayerStatus枚举）
 @property (nonatomic, assign)   NSInteger status;
 /// 对应的广告主
-@property (nonatomic, weak, nullable) id adObjc;
+@property (nonatomic, strong, nullable) id adObjc;
 /// 请求广告的错误信息
 @property (nonatomic, copy)     NSError *error;
 /// 对应的广告主数据，Feed：原始数据数组   Template:模板view数组

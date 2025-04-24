@@ -9,6 +9,7 @@
 #import <AVKit/AVKit.h>
 #import <MSaas/SFFeedManager.h>
 #import <MSaas/SFVideoConfig.h>
+#import <MSaas/SFVastModel.h>
 
 @class SFVideoView;
 
@@ -32,6 +33,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSTimeInterval currentTime;
 
 @property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) BOOL isFullInterStitial;
+@property (nonatomic, copy) NSString *clickThrough;
+@property (nonatomic, strong) NSMutableArray *clickTrackingArr;
+@property (nonatomic, assign) BOOL isVast; //是否是vast类型
+@property (nonatomic, assign) NSInteger videoTime;
+
+@property (nonatomic, strong) LinearModel *linearModel; //用于保存每个视频的linearModel
+
+/// 播放进度的回调
+@property(nonatomic , copy , readwrite)void (^playBlock)(CGFloat progress);
+/// 暂停播放的回调
+@property(nonatomic , copy , readwrite)void (^playPause)(void);
+/// 开始播放的回调
+@property(nonatomic , copy , readwrite)void (^playStart)(void);
+/// 播放是否静音的回调
+@property(nonatomic , copy , readwrite)void (^playMuteChange)(BOOL isMute);
 
 - (void)renderWirhVideo:(NSString *)videoUrl Image:(nullable NSString *)imageUrl;
 

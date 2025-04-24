@@ -76,6 +76,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
 
+/// 主动回调关闭横幅广告
+- (void)initiateCloseBannerAdView;
+
 @end
 
 NS_ASSUME_NONNULL_END

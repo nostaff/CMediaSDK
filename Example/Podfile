@@ -5,8 +5,8 @@ target 'testPod' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Mediatom
-  pod 'CMediaSDK', '2.7.8'
+  # CMediaSDK
+  pod 'CMediaSDK', '2.8.1'
 
   # 以下按需导入
   
@@ -20,31 +20,10 @@ target 'testPod' do
   pod 'CMediaSDK/SFAdKsAdapter'
   
   # 百度
-  # pod 'CMediaSDK/SFAdBaiduAdapter'
+  pod 'CMediaSDK/SFAdBaiduAdapter'
   
   # 京准通
-  # pod 'CMediaSDK/SFAdJztAdapter'
-  
-  # 汇盈
-  # pod 'CMediaSDK/SFAdHrAdapter'
-  
-  # 天目
-  # pod 'CMediaSDK/SFAdTmAdapter'
-  
-  # 章鱼
-  # pod 'CMediaSDK/SFAdZyAdapter'
-  
-  # 优推
-  # pod 'CMediaSDK/SFAdYtAdapter'
-  
-  # 科大讯飞
-  # pod 'CMediaSDK/SFAdKdxfAdapter'
-  
-  # Beizi
-  # pod 'CMediaSDK/SFAdBeiziAdapter'
-  
-  # Meishu
-  # pod 'CMediaSDK/SFAdMsAdapter'
+  pod 'CMediaSDK/SFAdJztAdapter'
   
   # Sigmob
   # pod 'CMediaSDK/SFAdSigmobAdapter'
@@ -63,31 +42,6 @@ target 'testPod' do
   
   # Vungle
   # pod 'CMediaSDK/SFAdVungleAdapter'
-  
-  # Tanx
-  # pod 'CMediaSDK/SFAdTbAdapter'
-  
-  # UnityAds
-  # pod 'CMediaSDK/SFAdUnityAdapter'
-  
-  # Applovin
-  # pod 'CMediaSDK/SFAdApplovinAdapter'
-
-  # Ironsource
-  # pod 'CMediaSDK/SFAdIronsourceAdapter'
-
-  # Inmobi
-  # pod 'CMediaSDK/SFAdInmobiAdapter'
-
-  # Bigo
-  # pod 'CMediaSDK/SFAdBigoAdapter'
-  
-  # TopOn
-  # pod 'CMediaSDK/SFAdTnAdapter'
-  
-  # TradPlus
-  # pod 'CMediaSDK/SFAdTpAdapter'
- 
 
 end
 post_install do |installer|

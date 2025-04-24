@@ -114,7 +114,12 @@ typedef NS_ENUM(NSUInteger, SFTemplateStyleOptions) {
 /**
  * 广告角标，必须渲染
  */
-@property (nonatomic, strong, nullable) UIImage *adLogo;
+@property (nonatomic, strong, nullable) UIImage *adLogo DEPRECATED_MSG_ATTRIBUTE("已弃用，使用 adLogoIcon 替代");
+
+/**
+ * 新版广告角标
+ */
+@property (nonatomic, strong, nullable) UIImage *adLogoIcon;
 
 /**
  * 广告主名称

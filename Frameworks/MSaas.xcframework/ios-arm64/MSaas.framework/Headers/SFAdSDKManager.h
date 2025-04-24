@@ -48,6 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)registerAppId:(NSString *)appId Environment:(SFADEnvironment)environment;
 /// 获取注册的APP id
 + (NSString *)appId;
+///执行后需重新进行初始化
++ (void)unRegister;
 
 /// 自定义配置用户分组信息
 + (void)setUserInfoForMap:(NSDictionary *)userInfo;
@@ -80,17 +82,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)enableDefaultAudioSessionSetting:(BOOL)enabled;
 
-/// 是否使用 WKWebView 替代 SafariViewController，默认为NO
-+ (void)usingWKWebView:(BOOL)open;
-
-/// 是否使用系统SafariViewController，默认为NO
-+ (void)usingOSSaferiWebView:(BOOL)open;
-
 /// 清除广告素材缓存
 + (void)clearAdMaterialCache;
 
 /// 欧盟GDPR合规弹窗
 - (void)presentDataConsentDialogInViewController:(UIViewController *)viewController dismissalCallback:(void(^)(SFGDPRConsentSet dataConsentSet))dismissCallback;
+
+/// 定制化信息 可选
++ (void)setExtraInfo:(NSString *)extraInfo;
 
 @end
 

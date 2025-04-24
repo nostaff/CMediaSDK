@@ -47,6 +47,7 @@ typedef void(^SFADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, strong) SFAdSourcesModel * _Nullable sourceModel;
 /// 联盟竞价失败原因上报
 - (void)biddingAdFailWithPrice:(NSString *)price;
+- (void)biddingAdFailWithPrice:(NSString *)price model:(SFAdSourcesModel *) model;
 /// 联盟竞价成功上报
 - (void)biddingAdSuccessWithPrice:(NSString *)price SecondPrice:(NSString *)secondPrice;
 /// 竞价ECPM

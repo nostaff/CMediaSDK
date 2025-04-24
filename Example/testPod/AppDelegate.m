@@ -27,6 +27,8 @@
     [self.window makeKeyAndVisible];
     
     [SFAdSDKManager registerAppId:app_id Environment:SFADEnvironmentCCTV];
+    [SFAdSDKManager unionAdCallbackLog: YES];
+    [SFAdSDKManager checkSdkIntegration];
     
     [self requestAD];
     return YES;

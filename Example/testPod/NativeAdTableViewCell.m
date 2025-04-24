@@ -112,14 +112,14 @@
      */
     /// 使用 SDK 自带模版渲染广告示例（国内广告需自己额外添加一个关闭广告按钮）
     self.adData.adTitle = [self.adData.adTitle stringByAppendingString: @"（SDK渲染）"];
-    SFTemplateAdView *adView = [[SFTemplateAdView alloc] initWithFrame:CGRectMake(0, 0, SF_ScreenW-24, 0) Model:self.adData Style:SFTemplateStyleLIRT LRMargin:12 TBMargin:12];
+    SFTemplateAdView *adView = [[SFTemplateAdView alloc] initWithFrame:CGRectMake(0, 0, SF_ScreenW-16, 0) Model:self.adData Style:SFTemplateStyleLIRT LRMargin:8 TBMargin:8];
     [self.adBackView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.adBackView addSubview:adView];
     self.adView = adView;
 }
 - (CGFloat)cellHeight{
     if (self.adData.adView) {
-        CGFloat cellHeight = self.adData.adView.bounds.size.height;
+        CGFloat cellHeight = self.adData.adView.bounds.size.height + 16;
         return cellHeight;
     } else {
         /// 使用 SDK 模版渲染示例 (广告高度+cell 上下间距)

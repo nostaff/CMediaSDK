@@ -50,6 +50,14 @@
     NSLog(@"开屏广告：加载成功");
     [self.manager showSplashAdWithWindow:[UIApplication sharedApplication].keyWindow];
 }
+
+/**
+ * 广告数据：加载成功
+ */
+- (void)splashAdDidRender{
+    NSLog(@"开屏广告：渲染成功");
+//    [self.manager showSplashAdWithWindow:[UIApplication sharedApplication].keyWindow];
+}
 /**
  * 广告数据：加载失败
  * @param error : 错误信息
