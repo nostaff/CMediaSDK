@@ -42,10 +42,15 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  自动播放时，是否静音。默认 YES。loadAd 前设置。
  *
- *  声音控制 MSaasVideoMuteEnable  YES：静音； NO：有声
+ *  声音实时控制 MSaasVideoMuteEnable  YES：静音； NO：有声
  *  [[NSNotificationCenter defaultCenter] postNotificationName:MSaasVideoMuteEnable object:nil userInfo:@{MSaasVideoEnableSwitchKey:@(status)}];
  */
 @property (nonatomic, assign) BOOL videoMuted;
+
+/**
+ *  由SDK控制视频是否静音。 默认NO
+ * */
+@property (nonatomic, assign) BOOL isVideoMutedConfig;
 
 /**
  *  是否循环播放视频广告，默认YES

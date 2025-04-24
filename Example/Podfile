@@ -6,7 +6,7 @@ target 'testPod' do
   use_frameworks!
 
   # CMediaSDK
-  pod 'CMediaSDK', '2.8.1'
+  pod 'CMediaSDK', '2.8.3'
 
   # 以下按需导入
   

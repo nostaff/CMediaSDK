@@ -45,7 +45,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign)   NSInteger adv_place_type;
 
 /// MARK: 以下参数为block回调
-/// 1：素材加载成功  2：素材加载失败  3：点击  4：从落地页返回  5：广告关闭 6：素材成功展示 7：激励视频获得奖励回调  8：素材渲染成功   9：视频播放状态改变
+/// 1：素材加载成功  2：素材加载失败  3：点击  4：从落地页返回  5：广告关闭 6：素材成功展示 7：激励视频获得奖励回调  8：素材渲染成功   9：视频播放状态改变  11：素材渲染失败
 @property (nonatomic, assign)   NSInteger type;
 /// 视频状态（具体查看SFMediaPlayerStatus枚举）
 @property (nonatomic, assign)   NSInteger status;

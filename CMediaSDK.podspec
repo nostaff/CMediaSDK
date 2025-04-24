@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "CMediaSDK"
-  s.version      = "2.8.1"
+  s.version      = "2.8.3"
   s.summary      = "Mobile App Aggregation Ad SDK of CMedia SDK for iOS."
   s.description  = <<-DESC
                    CMedia SDK is an advertising aggregation SDK that allows you to monetize iOS applications through CMedia advertising.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.xcconfig =   { 'OTHER_LDFLAGS' => ['-lObjC']}
   s.pod_target_xcconfig =   { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i' }
   
-  s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK-2.8.1.zip" }
+  s.source = { :http => "https://res.ads.cctv.com/demo/CMediaSDK-2.8.3.zip" }
   # s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => s.version.to_s }
   # s.source = { :git => "https://github.com/nostaff/CMediaSDK.git", :tag => "2.7.5" }
   # s.source = { :http => "https://github.com/xiaofu666/CMediaSDK/releases/download/#{s.version}/CMediaSDK.zip" }

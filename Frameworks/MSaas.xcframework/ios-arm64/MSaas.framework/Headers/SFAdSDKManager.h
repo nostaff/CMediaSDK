@@ -91,6 +91,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// 定制化信息 可选
 + (void)setExtraInfo:(NSString *)extraInfo;
 
+
+#pragma mark - 测试日志采集
+//采集测试日志
+-(void) saveTextLog: (NSString *) log;
+//获取测试日志
+-(NSString *) getTextLog;
+-(void) setLogOwner: (NSString *) className;
+-(void) deleteDebugLog: (NSString *) className;
+
 @end
 
 NS_ASSUME_NONNULL_END
